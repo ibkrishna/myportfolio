@@ -26,6 +26,9 @@ import { FaLocationArrow } from "react-icons/fa6";
 const Home = () => {
   const { isDarkMode } = useTheme();
   const navigate = useNavigate();
+  const projectSectionRef = useRef(null);
+  const [isProjectSectionVisible, setIsProjectSectionVisible] = useState(false);
+  
   const projects = [
     "LiveScar",
     "CareerLoom",
@@ -42,6 +45,33 @@ const Home = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   const intervalRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsProjectSectionVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px",
+      }
+    );
+
+    if (projectSectionRef.current) {
+      observer.observe(projectSectionRef.current);
+    }
+
+    return () => {
+      if (projectSectionRef.current) {
+        observer.unobserve(projectSectionRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     AOS.init({
@@ -127,8 +157,8 @@ const Home = () => {
                   <motion.button
                     className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-full ${
                       isDarkMode
-                        ? "bg-[#E9E1B4] text-black hover:bg-gray-200"
-                        : "bg-[#14213D] text-white hover:bg-gray-800"
+                        ? "bg-[#E9E1B4] text-black hover:bg-[#c3c0b1]"
+                        : "bg-[#14213D] text-white hover:bg-[#c6c2b5]"
                     } transition-colors duration-200`}
                     onClick={() => navigate("/contact")}
                     whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
@@ -140,8 +170,8 @@ const Home = () => {
                   <motion.button
                     className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-full border-2 ${
                       isDarkMode
-                        ? "border-[#E9E1B4] text-white hover:bg-gray-800"
-                        : "border-[#14213D] text-[#14213D] hover:bg-gray-100"
+                        ? "border-[#E9E1B4] text-white hover:bg-[#c3c0b1]"
+                        : "border-[#14213D] text-[#14213D] hover:bg-[#c6c2b5]"
                     } transition-colors duration-200`}
                     onClick={() => navigate("/projects")}
                     whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
@@ -176,91 +206,64 @@ const Home = () => {
         <section>
           <Education />
         </section>
-        <section>{/* <Certificates /> */}</section>
-        {/* <section className={`mt-14 py-10 ${isDarkMode ? "" : ""} lg:h-[430px] md:h-[230px]`}>
-        <div className="px-4 translate-y-6 lg:mx-20">
-            <AnimatedButton>
-              <div  className="flex justify-center">
-                <div
-                  className={`flex justify-center items-center text-center p-2 lg:min-w-full md:h-[100px] lg:min-h-[270px] cursor-pointer ${
-                    isDarkMode
-                      ? "bg-[#FFFFFF26] w-full hover:text-black"
-                      : "text-[#14213D] hover:text-[#14213d] "
-                  }`}
-                  onClick={() => navigate("/projects")}
-                >
-                  <h1
-                    className="text-lg md:text-xl lg:text-3xl md:mx-10 mx-6"
-                    data-aos="fade-right"
-                    style={{
-                      "-webkit-text-fill-color": "transparent",
-                      "-webkit-text-stroke-width": "1px",
-                    }}
-                  >
-                    Explore My Projects
-                  </h1>
-                  <FaLocationArrow className="md:h-[30px] md:w-[50px]"/>
-                </div>
-              </div>
-            </AnimatedButton>
-          </div>
-        </section> */}
+        <section>
+          {/* <Certificates /> */}
+        </section>
 
         <section
+          ref={projectSectionRef}
           className={`md:mt-14 py-10 ${
             isDarkMode ? "" : ""
           } lg:h-[430px] md:h-[230px]`}
         >
           <div className="px-4 translate-y-6 lg:mx-20">
-            <AnimatedButton>
-              <div className="flex justify-center">
-                <div
-                  className={`flex justify-center items-center text-center p-2 h-[150px] lg:min-w-full md:h-[155px] lg:min-h-[270px] cursor-pointer ${
-                    isDarkMode
-                      ? "bg-[#FFFFFF26] w-full hover:text-black"
-                      : "text-[#14213D] hover:text-[#14213d] "
-                  }`}
-                  onClick={() => navigate("/projects")}
-                >
-                  {/* Title and Arrow Container */}
-                  <div className="absolute lg:top-4 lg:left-1/2 lg:-translate-x-1/2 flex items-center gap-4">
-                    <h1
-                      className="text-lg md:text-xl lg:text-3xl"
-                      style={{
-                        WebkitTextFillColor: "transparent",
-                        WebkitTextStrokeWidth: "1px",
-                      }}
-                    >
-                      Explore My Projects
-                    </h1>
-                    <FaLocationArrow className="md:h-[30px] md:w-[50px]" />
-                  </div>
+          <AnimatedButton>
+  <div className="flex justify-center">
+    <div
+      className={`relative flex justify-center items-center text-center p-2 h-[150px] lg:min-w-full md:h-[155px] lg:min-h-[270px] cursor-pointer ${
+        isDarkMode
+          ? "bg-[#FFFFFF26] w-full hover:text-black"
+          : "text-[#14213D] hover:text-[#14213d]"
+      }`}
+      onClick={() => navigate("/projects")}
+    >
+      {/* Title and Arrow Container */}
+      <div className="absolute lg:top-16 flex items-center gap-4">
+        <h1
+          className="text-lg md:text-xl lg:text-3xl"
+          style={{
+            WebkitTextFillColor: "transparent",
+            WebkitTextStrokeWidth: "1px",
+          }}
+        >
+          Explore My Projects
+        </h1>
+        <FaLocationArrow className="md:h-[30px] md:w-[50px]" />
+      </div>
 
-                  {/* Falling Project Cards */}
-                  {projects.map((project) => (
-                    <div
-                      key={project}
-                      className={`project-card hidden lg:block px-6 py-3 rounded-xl transform transition-transform hover:scale-105
-                    ${
-                      isDarkMode
-                        ? "bg-[#FFFFFF26] font-thin border border-[#e9e1b4]"
-                        : "bg-white text-[#14213D] border border-gray-200"
-                    }`}
-                    style={{
-                      WebkitTextFillColor: "transparent",
-                      WebkitTextStrokeWidth: "1px",
-                    }}
-                    >
-                      <span className="text-lg md:text-xl font-bold">
-                        {project}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </AnimatedButton>
+      {/* Falling Project Cards */}
+      {projects.map((project) => (
+        <div
+          key={project}
+          className={`project-card hidden lg:block px-6 py-3 rounded-xl transform transition-transform hover:scale-105 ${
+            isProjectSectionVisible ? 'visible' : ''
+          } ${
+            isDarkMode
+              ? "bg-[#2A2A2A] text-[#E9E1B4] border border-[#E9E1B4]/30 hover:bg-[#363636]"
+              : "bg-white text-[#14213D] border border-gray-200 hover:bg-gray-50"
+          }`}
+        >
+          <span className="text-lg md:text-xl font-bold">
+            {project}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+</AnimatedButton>
           </div>
         </section>
+
         <section>
           <AnimatedSection delay={0.5}>
             <motion.div

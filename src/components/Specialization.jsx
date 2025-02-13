@@ -69,7 +69,7 @@ function Specialization() {
               <div className="flex items-center gap-6 lg:gap-10">
                 <Link
                   to={service.route}
-                  className={`px-4 p-1 md:px-4 md:py-2 text-xs lg:text-lg rounded-full ${isDarkMode ? 'bg-[#e9e1b4] text-[#14213d]' : 'bg-[#14213d] text-[#ffffff]'} flex items-center gap-2`} style={{fontFamily:'Inria Sans'}}
+                  className={`px-4 p-1 md:px-4 md:py-2 text-xs lg:text-lg rounded-full ${isDarkMode ? 'bg-[#e9e1b4] text-[#14213d] hover:bg-[#c3c0b1]' : 'bg-[#14213d] text-[#ffffff] hover:bg-[#c6c2b5]'} flex items-center gap-2`} style={{fontFamily:'Inria Sans'}}
                 >
                   Services i provide
                   <GoArrowUpRight size={16} />

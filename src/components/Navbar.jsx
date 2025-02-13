@@ -105,7 +105,7 @@ const Navbar = () => {
                   <Moon className="h-5 w-5 text-white" />
                 )}
               </button>
-              <button className={`hidden md:flex items-center md:text-lg lg:py-3.5 lg:p-3  sm:block md:p-1 ${isDarkMode ? 'text-[#0B2945] bg-[#E9E1B4]' : 'text-[#0B2945] bg-[#FFFCF2]'} rounded-full cursor-pointer text-xs`} onClick={() => navigate('/contact')}>
+              <button className={`hidden md:flex items-center md:text-lg lg:py-3.5 lg:p-4 sm:block md:p-2 ${isDarkMode ? 'text-[#0B2945] bg-[#E9E1B4] hover:bg-[#c3c0b1]' : 'text-[#0B2945] bg-[#FFFCF2] hover:bg-[#c6c2b5]'} rounded-full cursor-pointer text-xs`} onClick={() => navigate('/contact')}>
                 <h1 className='text-sm'>Book a Demo</h1>
                 <MdArrowOutward className='ml-2' />
               </button>

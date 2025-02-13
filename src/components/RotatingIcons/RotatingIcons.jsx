@@ -69,7 +69,7 @@ const RotatingIcons = () => {
             </a>
             {isHovered === index && (
               <div 
-                className={`absolute top-0 left-0 mt-6 text-center p-1 ${isDarkMode ? 'text-[#FFFCF2]' :'text-[#ffffff]'} text-sm`}
+                className={`absolute top-0 left-0 mt-6 text-center p-1 ${isDarkMode ? 'text-[#FFFCF2]' :'text-[#14213d]'} text-sm`}
                 style={{
                   left: isLeft ? '-100%' : '100%', 
                   // transform: isLeft ? 'translateX(-10px)' : 'translateX(10px)',

@@ -95,7 +95,7 @@ const ProjectList = () => {
                                </div>
                                
                             </div>
-                            <p className={`mt-4 ${isDarkMode ? 'text-white' : 'text-[#14213D]'}`} style={{fontFamily:'Inria Sans'}}>{item.description}</p>
+                            <p className={`mt-4 max-w-7xl ${isDarkMode ? 'text-white' : 'text-[#14213D]'}`} style={{fontFamily:'Inria Sans'}}>{item.description}</p>
                             <div className="mt-4 flex flex-wrap gap-2">
                                 {item.technologies.map((tech, index) => (
                                     <span

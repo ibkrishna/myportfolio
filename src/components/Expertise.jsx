@@ -34,16 +34,16 @@ function ExpertiseIcon({ icon: Icon, color, name, progress, img }) {
             <circle
               cx="48"
               cy="48"
-              r="44"
-              strokeWidth="6"
+              r="36"
+              strokeWidth="4"
               fill="none"
               stroke="#e9e1b4"
             />
             <circle
               cx="48"
               cy="48"
-              r="44"
-              strokeWidth="6"
+              r="36"
+              strokeWidth="5"
               fill="none"
               className={`${color} opacity-80`}
               strokeDasharray={`${2 * Math.PI * 44}`}
@@ -102,22 +102,22 @@ function Expertise() {
   const { isDarkMode } = useTheme();
 
   const webDevelopment = [
-    { img: HTML, color: "text-orange-400", name: "Html", progress: 90 },
-    { img: CSS, color: "text-blue-600", name: "Css", progress: 90 },
+    { img: HTML, color: "text-orange-400", name: "Html", progress: 50 },
+    { img: CSS, color: "text-blue-600", name: "Css", progress: 60 },
     {
       img: JavaScript,
       color: "text-yellow-400",
       name: "JavaScript",
-      progress: 90,
+      progress: 70,
     },
-    { img: Reactjs, color: "text-cyan-400", name: "React.js", progress: 85 },
-    { img: Nodejs, color: "text-green-700", name: "Node.js", progress: 80 },
-    { img: Mongodb, color: "text-green-400", name: "MongoDB", progress: 75 },
+    { img: Reactjs, color: "text-cyan-400", name: "React.js", progress: 75 },
+    { img: Nodejs, color: "text-green-700", name: "Node.js", progress: 60 },
+    { img: Mongodb, color: "text-green-400", name: "MongoDB", progress: 65 },
     {
       img: Tailwind,
       color: "text-cyan-500",
       name: "Tailwind Css",
-      progress: 85,
+      progress: 75,
     },
     { img: Redux, color: "text-purple-600", name: "Next.js", progress: 70 },
   ];

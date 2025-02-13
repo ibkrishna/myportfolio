@@ -69,7 +69,7 @@ const MobileRotatingIcons = () => {
               </a>
               {hoveredIndex === index && (
                 <div 
-                  className={`absolute top-0 left-0 mt-10 text-center p-1 ${isDarkMode ? 'text-[#FFFCF2]' :'text-[#fffcf2]'} text-md`}
+                  className={`absolute top-0 left-0 mt-10 text-center p-1 ${isDarkMode ? 'text-[#FFFCF2]' :'text-[#14213d]'} text-md`}
                   style={{
                     left: isLeft ? '-100%' : '100%', // Position the name to the left or right
                     transform: isLeft ? 'translateX(-10px)' : 'translateX(10px)',

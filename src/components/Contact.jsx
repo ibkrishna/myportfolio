@@ -365,8 +365,8 @@ const Contact = () => {
             onClick={handleSubmit}
             className={`mt-8 w-full md:hidden bg-transparent  border ${
               isDarkMode
-                ? "border-[#E3D5A7] text-white"
-                : " border-[#14213d] text-[#14213d]"
+                ? "border-[#E3D5A7] text-white hover:bg-[#c3c0b1]"
+                : " border-[#14213d] text-[#14213d] hover:bg-[#c6c2b5]"
             } py-4 px-6 rounded-full font-semibold flex items-center justify-center gap-2 transition-colors`}
           >
             Discuss the project
