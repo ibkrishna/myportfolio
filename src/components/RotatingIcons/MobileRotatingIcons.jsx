@@ -44,7 +44,7 @@ const MobileRotatingIcons = () => {
   ];
 
   return (
-    <div className="md:hidden w-full flex justify-center items-center overflow-hidden">
+    <div className="lg:hidden w-full flex justify-center items-center overflow-hidden">
       <div className="relative w-[300px] h-[300px]">
         {icons.map(({ Icon, name, link }, index) => {
           const { x, y } = calculatePosition(index, icons.length);

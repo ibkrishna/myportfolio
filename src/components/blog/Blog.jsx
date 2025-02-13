@@ -39,7 +39,7 @@ const Blog = () => {
         </h2>
       <div className="max-w-5xl mx-auto space-y-8 px-4">
         {blogPosts.map((post, index) => (
-          <div key={index} className={`flex flex-col md:flex-row items-center p-5 border-b ${isDarkMode ? 'border-[#E0E0E0]' : ''}`} data-aos="fade-up">
+          <div key={index} className={`flex flex-col md:flex-row items-center p-5 border rounded-2xl ${isDarkMode ? 'border-[#e9e1b4] bg-[#FFFFFF15]' : 'border-[#14213d] bg-[#f7f7f7]'}`} data-aos="fade-up">
             <div className={`flex-1`}>
               <h3 className={`text-xl md:text-2xl ${isDarkMode ? 'text-[#E3D5A7]' : 'text-[#14213d]'} font-medium`}>{post.title}</h3>
               <p className={`text-sm md:text-lg ${isDarkMode ? 'text-white' :'text-[#14213d]'} mb-2 py-2`} style={{fontFamily:'Inria Sans'}}>{post.date}</p>

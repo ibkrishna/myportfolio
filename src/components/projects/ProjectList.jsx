@@ -54,9 +54,9 @@ const ProjectList = () => {
 
     return (
         <section className="py-10">
-            <div className={`max-w-7xl mx-auto px-4`} style={{ fontFamily: 'Inria Sans' }}>
+            <div className={`lg:mx-14 px-4`} style={{ fontFamily: 'Inria Sans' }}>
                 <h2
-                    data-aos="fade-right"
+                    // data-aos="fade-right"
                     className={`text-4xl md:py-10 md:text-5xl font-medium text-center mb-16 ${isDarkMode ? 'text-[#E3D5A7]' : 'text-[#14213D]'}`}
                 >
                     List Of Projects
@@ -65,18 +65,16 @@ const ProjectList = () => {
                     {projectData.map((item, index) => (
                         <div
                             key={index}
-                            data-aos="fade-up"
+                            // data-aos="fade-up"
                             data-aos-delay={index * 500}
                             className={`p-6 rounded-lg transition-all duration-300 border  ${isDarkMode ? 'bg-[#FFFFFF15] border border-[#E9E1B4]' : 'bg-[#f7f7f7] border-[#14213d] hover:bg-gray-50'}`}
                         >
                             <div className="flex md:flex-row gap-4 items-start md:items-center justify-between">
-                                {/* Title and Link Section */}
                                 <div className="flex items-center gap-3">
-                                    <h3 className={`text-xs md:text-xl font-medium ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#14213D]'}`} style={{fontFamily:'Inria Sans'}}>
+                                    <h3 className={`text-xs md:text-xl lg:text-2xl font-medium ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#14213D]'}`} style={{fontFamily:'Inria Sans'}}>
                                         {item.title}
                                     </h3>
                                 </div>
-                                {/* GitHub Link */}
                                <div className="flex wwitems-center gap-10">
                                <a 
                                         href={item.link}

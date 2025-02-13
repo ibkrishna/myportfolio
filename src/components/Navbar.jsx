@@ -23,9 +23,8 @@ const Navbar = () => {
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'Projects', path: '/projects' },
-    { label: 'Blog', path: '/blog' },
-    { label: 'Contact', path: '/contact' },
     { label: 'Services', path: '/services' },
+    { label: 'Contact', path: '/contact' },
   ];
 
   useEffect(() => {
@@ -50,7 +49,7 @@ const Navbar = () => {
   return (
     <>
       <nav className={`fixed top-0 z-40 w-full opacity-100 ${isDarkMode ? 'bg-[#FFFFFF26]' : 'bg-[#14213d] text-[#fffcf2]'} shadow-lg  backdrop-blur-lg h-20`} style={{fontFamily:'Inria Sans'}}>
-        <div className="px-4 ">
+        <div className="px-4 lg:mx-20">
           <div className="flex items-center justify-between h-16">
             {/* Left - Menu Button (Mobile) and Logo */}
             <div className="flex items-center">
@@ -61,7 +60,7 @@ const Navbar = () => {
               >
                 <Menu className={`h-6 w-6 ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#FFFCF2]'}`} />
               </button>
-              <Link to="/" className="flex items-center space-x-3 md:space-y-4">
+              <Link to="/" className="flex items-center  md:space-y-4">
                 <Code className={`hidden h-8 w-8 ${isDarkMode ? 'text-[#E9E1B4]' : 'text-white'}`} />
                 <span className={`font-medium hidden md:block text-2xl ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#FFFCF2]'}`}>
                   Portfolio
@@ -69,7 +68,7 @@ const Navbar = () => {
               </Link>
             </div>
             {/* Center - Name */}
-            <span className={`font-bold md:hidden block text-xl ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#FFFCF2]'}`}>
+            <span className={`font-bold md:hidden block text-xl  ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#FFFCF2]'}`}>
               Portfolio
             </span>
             {/* Desktop Navigation */}
@@ -85,7 +84,7 @@ const Navbar = () => {
                       : isDarkMode
                         ? 'text-[#E9E1B4] hover:text-white'
                         : 'text-[#FFFCF2] hover:text-white'
-                    } transition-colors duration-200 lg:text-xl md:text-lg`}
+                    } transition-colors duration-200 lg:text-xl md:text-sm`}
                 >
                   {item.label}
                 </Link>
@@ -93,7 +92,7 @@ const Navbar = () => {
               {/* <button className={`border p-1 rounded-md lg:min-w-[100px]`}>Blog</button> */}
             </div>
             {/* Right - User Profile & Theme Toggle */}
-            <div className="flex items-center space-x-4 md:mt-4 gap-4 lg:gap-6">
+            <div className="flex items-center space-x-4 md:space-x-0 md:mt-4 gap-4 lg:gap-6">
               <MdArrowOutward className={`h-4 w-4 ml-2 md:hidden ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#FFFCF2]'}`} onClick={() => navigate('/contact')} />
               <button
                 onClick={toggleTheme}
@@ -106,11 +105,11 @@ const Navbar = () => {
                   <Moon className="h-5 w-5 text-white" />
                 )}
               </button>
-              <User className={`h-5 w-5 hidden md:block cursor-pointer ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#FFFCF2]'}`} onClick={() => navigate('/login')} />
-              <button className={`hidden md:flex items-center md:text-lg lg:py-3 sm:block md:p-3 ${isDarkMode ? 'text-[#0B2945] bg-[#E9E1B4]' : 'text-[#0B2945] bg-[#FFFCF2]'} rounded-full cursor-pointer text-xs`} onClick={() => navigate('/contact')}>
+              <button className={`hidden md:flex items-center md:text-lg lg:py-3.5 lg:p-3  sm:block md:p-1 ${isDarkMode ? 'text-[#0B2945] bg-[#E9E1B4]' : 'text-[#0B2945] bg-[#FFFCF2]'} rounded-full cursor-pointer text-xs`} onClick={() => navigate('/contact')}>
                 <h1 className='text-sm'>Book a Demo</h1>
                 <MdArrowOutward className='ml-2' />
               </button>
+              <User className={`h-5 w-5 hidden md:block cursor-pointer ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#FFFCF2]'}`} onClick={() => navigate('/login')} />
             </div>
           </div>
           {/* Mobile Menu - Slide from left */}

@@ -77,10 +77,10 @@ const Experience = () => {
   };
 
   return (
-    <section className="mt-14 py-10 mx-4 md:mx-14 lg:mx-20">
+    <section className="mt-14 py-10 mx-4 md:mx-6 lg:mx-20">
       <div className="">
         <h2
-          className={`text-3xl md:text-4xl font-medium mb-16 ${
+          className={`text-3xl md:text-4xl font-medium mb-16 mx-6 ${
             isDarkMode ? "text-[#E3D5A7]" : "text-[#14213D]"
           }`}
           style={{ fontFamily: "Inria Sans" }}

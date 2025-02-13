@@ -61,6 +61,7 @@ const ContactFooter = () => {
               <label className="text-xs lg:text-2xl cursor-pointer hover:underline" onClick={() => navigate('/')}>Home |  </label>
               <label className="text-xs lg:text-2xl cursor-pointer hover:underline" onClick={() => navigate('/contact')}>Contact |</label>
               <label className="text-xs lg:text-2xl cursor-pointer hover:underline" onClick={() => navigate('/projects')}>Project | </label>
+              <label className="text-xs lg:text-2xl cursor-pointer hover:underline" onClick={() => navigate('/blog')}>Blog | </label>
               <div className="flex lg:gap-4 gap-2 md:flex md:items-center">
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                   <AiOutlineInstagram className="text-xl lg:text-3xl hover:text-[#E9E1B4]" />

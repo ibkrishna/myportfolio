@@ -15,20 +15,23 @@ import Content from "../assets/tech/content.png";
 import Email from "../assets/tech/email.png";
 import PPC from "../assets/tech/ppc.png";
 import Strategy from "../assets/tech/strategy.png";
-import Figma from '../assets/tech/figma.png';
-import Photoshop from '../assets/tech/photoshop.png';
-import Adobe from '../assets/tech/adobe.png';
-
+import Figma from "../assets/tech/figma.png";
+import Photoshop from "../assets/tech/photoshop.png";
+import Adobe from "../assets/tech/adobe.png";
 
 function ExpertiseIcon({ icon: Icon, color, name, progress, img }) {
   const { isDarkMode } = useTheme();
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <div className={`${isDarkMode ? "bg-[#ffffff26]" : "bg-[#FFFFFF26]"} p-2 rounded-full`}>
+      <div
+        className={`${
+          isDarkMode ? "bg-[#ffffff26]" : "bg-[#FFFFFF26]"
+        } p-2 rounded-full`}
+      >
         <div className="relative w-24 h-24">
           <svg className="absolute inset-0 w-full h-full">
-          <circle
+            <circle
               cx="48"
               cy="48"
               r="44"
@@ -62,7 +65,9 @@ function ExpertiseIcon({ icon: Icon, color, name, progress, img }) {
         </div>
       </div>
       <span
-        className={`text-sm md:text-lg mt-2 text-center ${isDarkMode ? '' : 'text-[#14213d]'}`}
+        className={`text-sm md:text-lg mt-2 text-center ${
+          isDarkMode ? "" : "text-[#14213d]"
+        }`}
         style={{ fontFamily: "Inria Sans" }}
       >
         {name}
@@ -77,7 +82,9 @@ function ExpertiseSection({ title, icons }) {
   return (
     <div className="mb-16 mt-6">
       <h2
-        className={`text-xl mb-8 ${isDarkMode ? "text-[#ffffff]" : "text-[#14213d]"}`}
+        className={`text-xl mb-8 ${
+          isDarkMode ? "text-[#ffffff]" : "text-[#14213d]"
+        }`}
         style={{ fontFamily: "Inria Sans" }}
       >
         {title}
@@ -156,9 +163,29 @@ function Expertise() {
     },
   ];
 
+  const digitalMarketing1 = [
+    { img: SEO, color: "text-yellow-400", name: "SEO", progress: 85 },
+    {
+      img: SocialMedia,
+      color: "text-blue-400",
+      name: "Social Media",
+      progress: 80,
+    },
+    {
+      img: Analytics,
+      color: "text-green-400",
+      name: "Analytics",
+      progress: 75,
+    },
+  ];
+
   return (
-    <section className={`mt-14 py-10 ${isDarkMode ? "bg-[#FFFFFF26]" : "bg-[#f7f7f7]"}`}>
-      <div className="mx-4 md:mx-14 lg:mx-20">
+    <section className={`mt-14 py-10 `}>
+      <div
+        className={`mx-4 md:mx-6 lg:mx-24 p-6 rounded-2xl ${
+          isDarkMode ? "bg-[#FFFFFF26]" : "bg-[#f7f7f7]"
+        }`}
+      >
         <h1
           className={`text-3xl md:text-4xl font-medium ${
             isDarkMode ? "text-[#e9e1b4]" : "text-[#14213d]"
@@ -178,10 +205,19 @@ function Expertise() {
             icons={digitalMarketing}
           />
 
-          <ExpertiseSection
-            title="UI/UX Development Expertise"
-            icons={uiUxDevelopment}
-          />
+          <div
+            className={`${isDarkMode ? "" : ""} p-6 rounded-2xl`}
+          >
+            <ExpertiseSection
+              title="UI/UX Development Expertise"
+              icons={uiUxDevelopment}
+            />
+
+            <ExpertiseSection
+              title="Digital Marketing Expertise"
+              icons={digitalMarketing1}
+            />
+          </div>
         </div>
       </div>
     </section>

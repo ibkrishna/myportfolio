@@ -47,18 +47,18 @@ function Specialization() {
   };
 
   return (
-    <div className="mt-14 py-10 mx-4 md:mx-14 lg:mx-20">
-      <h1 className={`text-3xl md:text-4xl font-medium ${isDarkMode ? 'text-[#e9e1b4]' : 'text-[#14213d]'}`} style={{fontFamily:'Inria Sans'}}>
+    <div className="mt-14 py-10 mx-4 md:mx-6 lg:mx-24">
+      <h1 className={`text-3xl md:text-4xl font-medium mx-6 ${isDarkMode ? 'text-[#e9e1b4]' : 'text-[#14213d]'}`} style={{fontFamily:'Inria Sans'}}>
         Specialization
       </h1>
-      <h1 className={`md:text-2xl py-6 ${isDarkMode ? 'text-[#ffffff]' : 'text-[#14213d]'}`} style={{fontFamily:'Inria Sans'}}>
+      <h1 className={`md:text-2xl py-6 mx-6 ${isDarkMode ? 'text-[#ffffff]' : 'text-[#14213d]'}`} style={{fontFamily:'Inria Sans'}}>
         Our Services
       </h1>
       <div className="space-y-6 ">
         {services.map((service) => (
           <div
             key={service.id}
-            className={`rounded-2xl p-6 transition-all duration-300 md:py-10  lg:py-14 ${
+            className={`rounded-2xl p-6 transition-all duration-300 md:py-10 md:w-full lg:py-16 ${
               isDarkMode ? 'bg-[#FFFFFF26] text-white border border-[#737373]' : 'bg-[#f7f7f7] border-[#737373] border'
             }`}
           >
@@ -69,7 +69,7 @@ function Specialization() {
               <div className="flex items-center gap-6 lg:gap-10">
                 <Link
                   to={service.route}
-                  className={`px-2 md:px-4 md:py-2 text-xs lg:text-lg rounded-full ${isDarkMode ? 'bg-[#e9e1b4] text-[#14213d]' : 'bg-[#14213d] text-[#ffffff]'} flex items-center gap-2`} style={{fontFamily:'Inria Sans'}}
+                  className={`px-4 p-1 md:px-4 md:py-2 text-xs lg:text-lg rounded-full ${isDarkMode ? 'bg-[#e9e1b4] text-[#14213d]' : 'bg-[#14213d] text-[#ffffff]'} flex items-center gap-2`} style={{fontFamily:'Inria Sans'}}
                 >
                   Services i provide
                   <GoArrowUpRight size={16} />
@@ -77,7 +77,7 @@ function Specialization() {
                 <button
                   onClick={() => toggleService(service.id)}
                   className={`p-2 rounded-full ${
-                    isDarkMode ? 'bg-[#191a23]' : 'text-[#14213d] border-[#191A23] bg-[#ffffff]'
+                    isDarkMode ? 'bg-black' : 'text-[#14213d] border-[#191A23] bg-[#ffffff]'
                   }`}
                 >
                   {expandedService === service.id ? (

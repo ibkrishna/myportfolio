@@ -51,17 +51,17 @@ const projectsData = [
     github: "https://github.com/username/portfolio",
     tags: 'HTMX,Mongodb, Node.js, Express.js, Redux, Responsive'
   },
-  {
-    id: 4,
-    title: 'Job Portal ',
-    description: 'Automated the deployment process for a large-scale web application using Jenkins and Docker, improving development efficiency.',
-    imageDark: Jobdark,
-    imageLight: Joblight,
-    category: 'Website',
-    link: '#',
-    github: "https://github.com/username/portfolio",
-    tags: 'Flutter,Mongodb, Node.js, Express.js, Redux, Responsive'
-  }
+  // {
+  //   id: 4,
+  //   title: 'Job Portal ',
+  //   description: 'Automated the deployment process for a large-scale web application using Jenkins and Docker, improving development efficiency.',
+  //   imageDark: Jobdark,
+  //   imageLight: Joblight,
+  //   category: 'Website',
+  //   link: '#',
+  //   github: "https://github.com/username/portfolio",
+  //   tags: 'Flutter,Mongodb, Node.js, Express.js, Redux, Responsive'
+  // }
 ];
 
 const Projects = () => {
@@ -108,19 +108,19 @@ const Projects = () => {
 
   return (
     <section className="min-h-screen py-10 overflow-x-hidden md:overflow-x-visible">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="px-4">
         <div>
         <h2
           className={`text-4xl md:text-5xl text-center font-medium mb-10 ${isDarkMode ? 'text-[#E3D5A7]' : 'text-[#14213D]'}`}
           style={{ fontFamily: 'Inria Sans' }}
-          data-aos="fade-right" 
+          // data-aos="fade-right" 
         >
           My Projects
         </h2>
         <h2 className={`text-center max-w-3xl mx-auto ${isDarkMode ? 'text-[#E3D5A7]' : 'text-[#14213D]'}`} style={{fontFamily:'Inria Sans'}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid error, laudantium itaque voluptas harum libero suscipit repudiandae aut esse eius!</h2>
         </div>
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-14 max-w-7xl mx-auto">
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-14 lg:mx-14">
           {filteredProjects.map(project => (
             <ProjectCard key={project.id} project={project} />
           ))}

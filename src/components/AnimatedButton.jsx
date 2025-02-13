@@ -10,6 +10,8 @@ function AnimatedButton({ children, onClick, className = '' }) {
             className={`
                 relative 
                 border
+                lg:h-[270px]
+                h-[150px]
                 ${isDarkMode ? 'border-[#E9E1B4] hover:text-[#14213D]' : 'border-[#14213D] hover:text-[#14213d]'}
                 rounded-2xl 
                 overflow-hidden 
@@ -21,7 +23,7 @@ function AnimatedButton({ children, onClick, className = '' }) {
         >
             <span 
                 className={`
-                    relative z-10 
+                    relative z-10
                     group-hover:${isDarkMode ? 'text-[#14213D]' : 'text-[#14213d]'} 
                     ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#14213D]'}
                 `}

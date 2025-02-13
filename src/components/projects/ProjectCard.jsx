@@ -37,13 +37,13 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <div
-      className={`relative group overflow-hidden rounded-lg transition-all duration-300 ${
+      className={`relative group overflow-hidden rounded-lg transition-all duration-300 md:mx-4 ${
         isDarkMode
           ? "border border-[#E9E1B4] bg-[#FFFFFF26]"
           : "border border-[#14213d] bg-[#f7f7f7] text-[#14213d]"
       }`}
-      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-      data-aos-delay={`${index * 100}`}
+      // data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+      // data-aos-delay={`${index * 100}`}
     >
       <div
         className={`relative overflow-hidden aspect-video p-2 animate-slide-right`}

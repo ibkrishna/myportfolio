@@ -69,7 +69,7 @@ const Certificates = () => {
   const justifyClass = getJustifyClass();
 
   return (
-    <div className="mt-14 py-10 mx-4 md:mx-14 lg:mx-20">
+    <div className="mt-14 py-10 mx-4 md:mx-6 lg:mx-20">
       <h1
         data-aos="fade-right"
         className={`text-3xl font-medium ${isDarkMode ? 'text-[#e9e1b4]' : ''}`}

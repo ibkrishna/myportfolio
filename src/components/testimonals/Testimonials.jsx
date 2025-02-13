@@ -96,10 +96,10 @@ function TestimonialCards() {
   };
 
   return (
-    <section className={`mt-14 py-10 ${isDarkMode ? "bg-[#FFFFFF26]" : "bg-[#f7f7f7]"}`}>
-      <div className="" style={{ fontFamily: "Inria Sans" }}>
+    <section className={`mt-14 py-10`}>
+      <div className={` md:mx-4 lg:mx-24 rounded-2xl p-6 ${isDarkMode ? "bg-[#FFFFFF26]" : "bg-[#f7f7f7]"}`} style={{ fontFamily: "Inria Sans" }}>
         <h1
-          className={`mx-4 md:mx-14 lg:mx-20 text-3xl md:text-4xl font-medium mb-6 ${
+          className={`text-3xl md:text-4xl font-medium mb-6 ${
             isDarkMode ? "text-[#e9e1b4]" : "text-[#14213d]"
           }`}
           style={{ fontFamily: "Inria Sans" }}
@@ -136,7 +136,7 @@ function TestimonialCards() {
                   </div>
                   <div
                     className={`${
-                      isDarkMode ? "bg-[#292922]" : "bg-[#A0A08326]"
+                      isDarkMode ? "bg-[#141411]" : "bg-[#A0A08326]"
                     } w-full flex flex-col items-center`}
                   >
                     <div className={`flex gap-1 mb-2 mt-4`}>
@@ -151,7 +151,7 @@ function TestimonialCards() {
                   </div>
                   <div
                     className={`${
-                      isDarkMode ? "bg-[#292922]" : "bg-[#A0A08326]"
+                      isDarkMode ? "bg-[#141411]" : "bg-[#A0A08326]"
                     } w-full flex flex-col items-center py-2`}
                     style={{fontFamily:'Inria Sans'}}
                   >
