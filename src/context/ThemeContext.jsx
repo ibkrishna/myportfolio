@@ -8,15 +8,22 @@ export const ThemeProvider = ({ children }) => {
       const savedTheme = localStorage.getItem('theme');
       return savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
-    return false;
+    return true; 
   });
+
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+  //     document.documentElement.classList.toggle('dark', isDarkMode);
+  //   }
+  // }, [isDarkMode]);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-      document.documentElement.classList.toggle('dark', isDarkMode);
+      document.documentElement.classList.add('dark'); // Ensure dark mode is applied
+      localStorage.setItem('theme', 'dark');
     }
-  }, [isDarkMode]);
+  }, [])
 
   const toggleTheme = () => {
     setIsDarkMode((prev) => !prev);

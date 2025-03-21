@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Login from './Auth/Login';
 import Blog from './components/blog/Blog';
 import './style.css'; 
+import Services from './components/Services';
 
 function App() {
   const { isDarkMode } = useTheme();
@@ -27,20 +28,22 @@ function App() {
 
   return (
     <>
-      <canvas id="canvas" className="absolute inset-0"></canvas> 
+      <canvas id="canvas" className="absolute inset-0 z-50"></canvas> 
       <Router>
-        <div className={`min-h-screen ${isDarkMode ? 'bg-black text-white ' : 'bg-white'}`}>
+        <div className={`min-h-screen ${isDarkMode ? 'text-white bg-black opacity-80' : 'bg-white opacity-90'}`}>
           <Navbar />
           <main className="pt-16 relative"> 
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/projects" element={<Project />} />
+              <Route path="/service" element={<Services />} />
+              <Route path="/service/:service" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
             </Routes>
           </main>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Router>
     </>

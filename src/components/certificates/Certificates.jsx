@@ -11,65 +11,92 @@ const certificates = [
   { id: 6, title: "Digital Marketing", year: "2022", issuedBy: "Google" }
 ];
 
+const DISPLAY_TIME = 8000;
+const TRANSITION_TIME = 2000;
+const TOTAL_CYCLE_TIME = DISPLAY_TIME + TRANSITION_TIME;
+
 const Certificates = () => {
   const { isDarkMode } = useTheme();
   const [currentPage, setCurrentPage] = useState(0);
-  const [isFlipping, setIsFlipping] = useState(false);
-  const certificatesPerPage = 3;
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [displayMode, setDisplayMode] = useState(3);
 
-  // Calculate certificates per row based on screen size (for display purposes only)
   const getDisplayMode = () => {
-    if (window.innerWidth >= 1024) return 3; // Desktop
-    if (window.innerWidth >= 768) return 2;  // Tablet
-    return 1; // Mobile
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
   };
 
-  const [displayMode, setDisplayMode] = useState(getDisplayMode());
-
-  // Update display mode on window resize
   useEffect(() => {
     const handleResize = () => {
-      setDisplayMode(getDisplayMode());
+      const newDisplayMode = getDisplayMode();
+      if (newDisplayMode !== displayMode) {
+        setDisplayMode(newDisplayMode);
+        setCurrentPage(0);
+        setIsTransitioning(false);
+      }
     };
-
+    
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [displayMode]);
 
-  // Auto-flip functionality
   useEffect(() => {
-    const totalPages = Math.ceil(certificates.length / certificatesPerPage);
+    let displayTimer;
+    let transitionTimer;
     
-    const interval = setInterval(() => {
-      setIsFlipping(true);
+    const startNextTransition = () => {
+      setIsTransitioning(true);
       
-      setTimeout(() => {
-        setCurrentPage((prev) => (prev + 1) % totalPages);
-        setIsFlipping(false);
-      }, 400);
-    }, 4000);
+      transitionTimer = setTimeout(() => {
+        setCurrentPage((prev) => {
+          const totalPages = displayMode === 1 
+            ? certificates.length 
+            : Math.ceil(certificates.length / displayMode);
+          return (prev + 1) % totalPages;
+        });
+        setIsTransitioning(false);
+      }, TRANSITION_TIME);
+    };
 
-    return () => clearInterval(interval);
-  }, []);
+    const interval = setInterval(() => {
+      displayTimer = setTimeout(() => {
+        startNextTransition();
+      }, DISPLAY_TIME);
+    }, TOTAL_CYCLE_TIME);
 
-  // Get current certificates to display (always 3 per page)
+    displayTimer = setTimeout(() => {
+      startNextTransition();
+    }, DISPLAY_TIME);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(displayTimer);
+      clearTimeout(transitionTimer);
+    };
+  }, [displayMode]);
+
   const getCurrentCertificates = () => {
-    const startIndex = currentPage * certificatesPerPage;
-    return certificates.slice(startIndex, startIndex + certificatesPerPage);
+    if (displayMode === 1) {
+      return [certificates[currentPage]];
+    }
+    const startIndex = (currentPage * displayMode) % certificates.length;
+    return certificates.slice(startIndex, startIndex + displayMode);
   };
 
-  // Get justify class based on display mode
-  const getJustifyClass = () => {
-    if (displayMode === 1) return 'justify-start pl-4';
-    if (displayMode === 2) return 'justify-between px-4';
-    return 'justify-evenly';
+  const getPositionClass = (index) => {
+    if (displayMode !== 3) return '';
+    if (index === 0) return 'certificate-left';
+    if (index === 1) return 'certificate-middle';
+    if (index === 2) return 'certificate-right';
+    return '';
   };
 
   const currentCertificates = getCurrentCertificates();
-  const justifyClass = getJustifyClass();
 
   return (
-    <div className="mt-14 py-10 mx-4 md:mx-6 lg:mx-20">
+    <div className="mt-14 py-10 mx-4 md:mx-6 lg:mx-28">
       <h1
         data-aos="fade-right"
         className={`text-3xl font-medium ${isDarkMode ? 'text-[#e9e1b4]' : ''}`}
@@ -77,18 +104,22 @@ const Certificates = () => {
       >
         Certificates
       </h1>
-      <div className="relative mt-10">
-        <div className={`certificates-wrapper ${isFlipping ? 'flipped' : ''}`}>
+      <div className="relative lg:mt-10">
+        <div className="certificates-wrapper">
           <div
-            data-aos="fade-left"
-            className={`flex ${justifyClass} items-center min-h-[450px] w-full transition-all duration-500 ease-in-out`}
+            className={`flex flex-wrap gap-8 items-center min-h-[450px] w-full transition-all duration-500 ease-in-out
+              ${displayMode === 3 ? 'lg:justify-evenly' : 
+                displayMode === 2 ? 'md:justify-evenly' : 
+                'justify-center'}`}
           >
             {currentCertificates.map((cert, index) => (
               <div
                 key={cert.id}
                 className={`certificate-container ${
-                  index === 1 && displayMode === 3 ? 'certificate-middle' : ''
-                }`}
+                  isTransitioning 
+                    ? `slide-out-${displayMode}`
+                    : `slide-in-${displayMode}`
+                } ${getPositionClass(index)}`}
               >
                 <CertificateBadge
                   title={cert.title}
@@ -102,13 +133,12 @@ const Certificates = () => {
         </div>
       </div>
       
-      {/* Page indicators */}
       <div className="flex justify-center gap-2 mt-6">
-        {Array.from({ length: Math.ceil(certificates.length / certificatesPerPage) }).map((_, index) => (
+        {Array.from({ length: Math.ceil(certificates.length / displayMode) }).map((_, index) => (
           <button
             key={index}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              currentPage === index 
+              index === currentPage
                 ? `${isDarkMode ? 'bg-[#e9e1b4]' : 'bg-[#14213d]'} w-4` 
                 : 'bg-gray-300'
             }`}

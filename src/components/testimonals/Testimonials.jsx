@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
+// import AOS from "aos";
+import "aos/dist/aos.css";
 
 const testimonials = [
   {
     id: 1,
     content:
-      "The insights provided by shiva have been invaluable. Our conversion rates have improved dramatically since we started using it. The team is knowledgeable and genuinely cares about our success.",
+      "Outstanding design and seamless functionality. The portfolio perfectly showcases our brand's strengths. Highly recommend!",
     author: "Riya Sharma",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
@@ -15,7 +17,7 @@ const testimonials = [
   {
     id: 2,
     content:
-      "Working with this platform has transformed our business approach. The analytical tools and insights have helped us make data-driven decisions with confidence.",
+   "Incredible attention to detail and a user-friendly interface. Our portfolio has never looked better. Fantastic work!",
     author: "Alex Chen",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150",
@@ -24,7 +26,7 @@ const testimonials = [
   {
     id: 3,
     content:
-      "The customer support team is exceptional. They've helped us navigate complex challenges and optimize our strategy for maximum impact.",
+      "Professional and aesthetically pleasing design. The portfolio site has boosted our online presence significantly. Exceptional service!",
     author: "Sarah Johnson",
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150",
@@ -33,7 +35,7 @@ const testimonials = [
   {
     id: 4,
     content:
-      "I'm impressed by the depth of analysis and actionable insights. This tool has become an essential part of our daily operations.",
+     "Creative and innovative design solutions. The portfolio captures our essence beautifully. Excellent collaboration and execution!",
     author: "Michael Rodriguez",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150",
@@ -42,7 +44,7 @@ const testimonials = [
   {
     id: 5,
     content:
-      "The platform's intuitive interface and comprehensive reporting have made it easy for our entire team to stay aligned and make informed decisions.",
+      "Responsive, visually stunning, and easy to navigate. Our portfolio website stands out thanks to their expertise. Top-notch!",
     author: "Emily Zhang",
     image:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150",
@@ -96,8 +98,8 @@ function TestimonialCards() {
   };
 
   return (
-    <section className={`mt-14 py-10`}>
-      <div className={` md:mx-4 lg:mx-24 rounded-2xl p-6 ${isDarkMode ? "bg-[#FFFFFF26]" : "bg-[#f7f7f7]"}`} style={{ fontFamily: "Inria Sans" }}>
+    <section className={`mt-14 py-10`} >
+      <div className={` mx-4 md:mx-4 lg:mx-24 rounded-2xl p-6 ${isDarkMode ? "bg-[#FFFFFF26]" : "bg-[#f7f7f7]"}`} style={{ fontFamily: "Inria Sans" }}>
         <h1
           className={`text-3xl md:text-4xl font-medium mb-6 ${
             isDarkMode ? "text-[#e9e1b4]" : "text-[#14213d]"
@@ -108,12 +110,17 @@ function TestimonialCards() {
         </h1>
         <div className="max-w-7xl lg:mx-auto lg:py-10 mx-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {getCurrentTestimonials().map((testimonial) => (
+            {getCurrentTestimonials().map((testimonial,index) => (
               <div
                 key={testimonial.id}
                 className={`${
                   isDarkMode ? "bg-[#141411]" : "bg-[#ffffff]"
                 } backdrop-blur-sm rounded-md flex flex-col overflow-hidden transition-all duration-500 ease-in-out`}
+                data-aos={index % 2 === 0 ? 'zoom-in-down' : 'zoom-in'}
+                data-aos-offset={index % 2 === 0 ? '300' : '300'}
+                data-aos-easing={index % 2 === 0 ? 'ease-in-sine' : undefined}
+                // data-aos-anchor={index % 2 === 0 ? undefined : '#example-anchor'}
+                // data-aos-duration={index % 2 === 0 ? undefined : '500'}
               >
                 <div className="p-6 flex-grow">
                   <p
@@ -136,7 +143,7 @@ function TestimonialCards() {
                   </div>
                   <div
                     className={`${
-                      isDarkMode ? "bg-[#141411]" : "bg-[#A0A08326]"
+                      isDarkMode ? "bg-[#141411]" : "bg-white"
                     } w-full flex flex-col items-center`}
                   >
                     <div className={`flex gap-1 mb-2 mt-4`}>
@@ -151,7 +158,7 @@ function TestimonialCards() {
                   </div>
                   <div
                     className={`${
-                      isDarkMode ? "bg-[#141411]" : "bg-[#A0A08326]"
+                      isDarkMode ? "bg-[#141411]" : "bg-[#ffffff]"
                     } w-full flex flex-col items-center py-2`}
                     style={{fontFamily:'Inria Sans'}}
                   >

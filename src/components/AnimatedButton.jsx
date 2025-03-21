@@ -10,7 +10,7 @@ function AnimatedButton({ children, onClick, className = '' }) {
             className={`
                 relative 
                 border
-                lg:h-[270px]
+                lg:h-[400px]
                 h-[150px]
                 ${isDarkMode ? 'border-[#E9E1B4] hover:text-[#14213D]' : 'border-[#14213D] hover:text-[#14213d]'}
                 rounded-2xl 

@@ -45,7 +45,7 @@ const RotatingIcons = () => {
   return (
     <div className="hidden lg:block w-[500px] h-[450px] relative">
     {/* Rotating Icons */}
-    <div className="absolute top-0 left-0 w-full h-full">
+    <div className="absolute -top-5 left-0 w-full h-full">
       {icons.map(({ Icon, name, link }, index) => {
         const { x, y } = calculatePosition(index, icons.length);
         const isLeft = x < 0;
@@ -55,7 +55,7 @@ const RotatingIcons = () => {
             key={index}
             className="absolute p-2 transition-all duration-300 ease-in-out"
             style={{
-              transform: `translate(${x + 340}px, ${y + 200}px)`,
+              transform: `translate(${x + 340}px, ${y + 220}px)`,
               left: 0,
               top: 0,
             }}
@@ -69,7 +69,7 @@ const RotatingIcons = () => {
             </a>
             {isHovered === index && (
               <div 
-                className={`absolute top-0 left-0 mt-6 text-center p-1 ${isDarkMode ? 'text-[#FFFCF2]' :'text-[#14213d]'} text-sm`}
+                className={`absolute top-0 left-4 mt-4 text-center p-1 ${isDarkMode ? 'text-[#FFFCF2]' :'text-[#14213d]'} text-sm`}
                 style={{
                   left: isLeft ? '-100%' : '100%', 
                   // transform: isLeft ? 'translateX(-10px)' : 'translateX(10px)',

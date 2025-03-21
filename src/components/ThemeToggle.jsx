@@ -4,7 +4,7 @@ import { Sun, Moon } from 'lucide-react';
 const ThemeToggle = ({ isDarkMode, toggleTheme }) => (
   <button
     onClick={toggleTheme}
-    className={`p-2 rounded-full ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-[#E9EDC9]'
+    className={`p-2 rounded-full ${isDarkMode ? 'hover:bg-[#ffffff26]' : 'hover:bg-[#E9EDC9]'
       } transition-colors duration-200`}
   >
     {isDarkMode ? (

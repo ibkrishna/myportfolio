@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import { ExternalLink } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { ExternalLink, Github } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
 import AOS from "aos";
-import { Github } from "lucide-react";
 
 const getRandomColor = () => {
   const colors = [
@@ -20,6 +19,7 @@ const getRandomColor = () => {
 
 const ProjectCard = ({ project, index }) => {
   const { isDarkMode } = useTheme();
+  const [showFullDescription, setShowFullDescription] = useState(false); // New state to toggle description
 
   const tags = project.tags.split(",");
 
@@ -35,26 +35,30 @@ const ProjectCard = ({ project, index }) => {
     };
   }, []);
 
+  const toggleDescription = () => {
+    setShowFullDescription((prev) => !prev); // Toggle full description visibility
+  };
+
   return (
     <div
-      className={`relative group overflow-hidden rounded-lg transition-all duration-300 md:mx-4 ${
+      className={`relative group overflow-hidden rounded-lg transition-all duration-300 md:mx-6 ${
         isDarkMode
           ? "border border-[#E9E1B4] bg-[#FFFFFF26]"
-          : "border border-[#14213d] bg-[#f7f7f7] text-[#14213d]"
+          : "border border-[#14213d] bg-[#d5d4d47a] text-[#14213d]"
       }`}
-      // data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-      // data-aos-delay={`${index * 100}`}
+      data-aos={index % 2 === 0 ? "zoom-in-up" : "zoom-in-down"}
+      data-aos-delay={`${index * 100}`}
     >
       <div
-        className={`relative overflow-hidden aspect-video p-2 animate-slide-right`}
+        className={`relative overflow-hidden aspect-video p-2`}
       >
         <a href={project.github} target="_blank" rel="noopener noreferrer">
           <Github
-            className={` ${
+            className={`${
               isDarkMode
                 ? "bg-black rounded-full p-2"
-                : "bg-[#f7f7f7] text-[#14213d] rounded-full border-[#e9e1b4]"
-            } absolute top-10 right-10  z-10 h-10 w-10 p-2 cursor-pointer`}
+                : "bg-[#14213d] text-[#f7f7f7] rounded-full border-[#e9e1b4]"
+            } absolute top-14 right-6  z-10 h-10 w-10 p-2 cursor-pointer`}
           />
         </a>
         <img
@@ -64,9 +68,13 @@ const ProjectCard = ({ project, index }) => {
         />
       </div>
 
-      <div className={`bottom-0 left-0 right-0 p-6 md:mb-2`}>
+      <div className={`bottom-0 left-0 right-0 p-6 md:p-3 lg:p-6 md:mb-2`}>
         <div className="flex items-center justify-between">
-          <h3 className={`text-xl ${isDarkMode ? "text-white" : "text-[#14213d]"}`}>
+          <h3
+            className={`text-xl ${
+              isDarkMode ? "text-white" : "text-[#14213d]"
+            }`}
+          >
             {project.title}
           </h3>
           <a
@@ -82,18 +90,26 @@ const ProjectCard = ({ project, index }) => {
             />
           </a>
         </div>
-        <p
-          className={`mt-2 text-md line-clamp-2 ${
-            isDarkMode ? "text-white" : ""
-          }`}
-        >
-          {project.description}
+
+        <p className={`mt-2 text-md ${isDarkMode ? "text-white" : ""}`}>
+          {showFullDescription
+            ? project.description
+            : `${project.description.slice(0, 50)}...`}
         </p>
-        <div className="mt-4 flex flex-wrap gap-2">
+
+        {/* Toggle button for read more */}
+        <button
+          onClick={toggleDescription}
+          className="text-sm text-[#FF6347] hover:underline mt-2"
+        >
+          {showFullDescription ? "Read Less" : "Read More"}
+        </button>
+
+        <div className="mt-4 grid grid-cols-2 lg:grid-cols-4">
           {tags.map((tag, index) => (
             <span
               key={index}
-              className={`text-sm font-medium py-1 px-3 rounded-full ${getRandomColor()}`}
+              className={`text-sm font-medium py-1 rounded-full ${getRandomColor()}`}
             >
               #{tag.trim()}
             </span>

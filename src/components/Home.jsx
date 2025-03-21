@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 import RotatingIcons from "../components/RotatingIcons/RotatingIcons";
@@ -9,9 +8,6 @@ import Education from "./Education";
 import Testimonials from "./testimonals/Testimonials";
 import "../index.css";
 import { useNavigate } from "react-router-dom";
-import { technologies } from "../constants";
-import { BallCanvas } from "./canvas";
-import AnimatedSection from "./Animated";
 import MobileRotatingIcons from "./RotatingIcons/MobileRotatingIcons";
 import RotatingText from "../components/RotatingIcons/RotatingText";
 import Specialization from "./Specialization";
@@ -28,7 +24,7 @@ const Home = () => {
   const navigate = useNavigate();
   const projectSectionRef = useRef(null);
   const [isProjectSectionVisible, setIsProjectSectionVisible] = useState(false);
-  
+
   const projects = [
     "LiveScar",
     "CareerLoom",
@@ -37,6 +33,12 @@ const Home = () => {
     "DevFlow",
     "CodeCraft",
     "WebMaster",
+    "Portfolio",
+    "Shikshamitra",
+    "Shivam Trading",
+    "Marina Shipping",
+    "Playscape",
+    "Katie",
   ];
 
   const text = "Shiva Raj";
@@ -112,14 +114,22 @@ const Home = () => {
     { value: "4+", label: "Years of Experience" },
   ];
 
+  const staticText = `Web development is essential in today’s digital world, involving front-end and back-end development. Front-end developers focus on the client-side, creating the elements users interact with using HTML, CSS, and JavaScript to ensure an engaging and responsive user experience. Back-end developers handle the server-side, using languages like PHP, Ruby, and Python to manage data, user authentication, and security. Full-stack developers are skilled in both areas, allowing them to create complete websites and applications.`;
+
+  const words = staticText.split(/\s+/);
+  const maxWords = 75;
+
+  const truncatedText =
+    words.length > maxWords ? words.slice(0, maxWords).join(" ") : staticText;
+
   return (
     <>
       <div className="overflow-x-hidden md:overflow-x-visible">
-        <section className="py-10 lg:mx-14 md:mx-4 lg:min-h-screen">
+        <section className="py-10 lg:mx-14 md:mx-4 lg:h-[80vh] lg:mt-14">
           <div className="lg:px-10 px-4">
-            <div className="flex flex-col-reverse md:flex-row items-center justify-between">
+            <div className="flex flex-col-reverse lg:flex-row items-center lg:justify-between">
               <div
-                className="w-full md:w-1/2 text-center md:text-left"
+                className="w-full lg:w-1/2 text-center md:text-left"
                 style={{ fontFamily: "Inria Sans" }}
                 data-aos="fade-left"
               >
@@ -142,36 +152,32 @@ const Home = () => {
                   <RotatingText />
                 </h1>
                 <p
-                  className={`text-xl mb-8 ${
+                  className={`md:text-xl mb-8 text-justify text-sm ${
                     isDarkMode ? "text-[#FFFFFF]" : "text-[#14213D]"
                   }`}
                   style={{ fontFamily: "Inria Sans" }}
                   data-aos="zoom-in"
                 >
-                  a passionate Web Developer focused on creating innovative
-                  solutions and transforming creative concepts into reality.
-                  Explore my world of design, development, and problem-solving!
+                  {truncatedText}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                  <motion.button
-                    className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-full ${
+                  <button
+                    className={`flex items-center justify-center  px-6 py-3 rounded-full md:w-40 md:py-3.5 ${
                       isDarkMode
-                        ? "bg-[#E9E1B4] text-black hover:bg-[#c3c0b1]"
-                        : "bg-[#14213D] text-white hover:bg-[#c6c2b5]"
+                        ? "bg-[#E9E1B4] text-black hover:bg-[#ffffff]/[0.15] hover:text-white hover:border hover:border-[#E9E1B4]"
+                        : "bg-[#14213d] text-[white] hover:bg-[#F7F7F7] hover:border hover:border-[#14213d] hover:text-[#14213d]"
                     } transition-colors duration-200`}
                     onClick={() => navigate("/contact")}
-                    whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-                    whileTap={{ scale: 0.95 }}
                   >
                     <span>Hire Me</span>
-                  </motion.button>
+                  </button>
 
-                  <motion.button
-                    className={`flex items-center justify-center space-x-2 px-6 py-3 rounded-full border-2 ${
+                  <button
+                    className={`flex items-center justify-center px-6 py-3 rounded-full md:w-40 md:py-3.5 ${
                       isDarkMode
-                        ? "border-[#E9E1B4] text-white hover:bg-[#c3c0b1]"
-                        : "border-[#14213D] text-[#14213D] hover:bg-[#c6c2b5]"
+                        ? "bg-[#E9E1B4] text-black hover:bg-[#ffffff]/[0.15] hover:text-white hover:border hover:border-[#E9E1B4]"
+                        : "bg-[#14213d] text-[white] hover:bg-[#F7F7F7] hover:border hover:border-[#14213d] hover:text-[#14213d]"
                     } transition-colors duration-200`}
                     onClick={() => navigate("/projects")}
                     whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
@@ -179,11 +185,11 @@ const Home = () => {
                   >
                     <span>My Works</span>
                     <ArrowRight className="h-4 w-4" />
-                  </motion.button>
+                  </button>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 md:flex md:justify-center items-center md:p-8 md:-translate-x-0">
-                <div className="transform hover:scale-105 transition-transform duration-300">
+              <div className="w-full md:w-1/2 md:flex md:justify-center items-center md:p-8 lg:-translate-x-16">
+                <div className="">
                   <RotatingIcons />
                   <MobileRotatingIcons />
                 </div>
@@ -207,7 +213,7 @@ const Home = () => {
           <Education />
         </section>
         <section>
-          {/* <Certificates /> */}
+          <Certificates />
         </section>
 
         <section
@@ -216,68 +222,58 @@ const Home = () => {
             isDarkMode ? "" : ""
           } lg:h-[430px] md:h-[230px]`}
         >
-          <div className="px-4 translate-y-6 lg:mx-20">
-          <AnimatedButton>
-  <div className="flex justify-center">
-    <div
-      className={`relative flex justify-center items-center text-center p-2 h-[150px] lg:min-w-full md:h-[155px] lg:min-h-[270px] cursor-pointer ${
-        isDarkMode
-          ? "bg-[#FFFFFF26] w-full hover:text-black"
-          : "text-[#14213D] hover:text-[#14213d]"
-      }`}
-      onClick={() => navigate("/projects")}
-    >
-      {/* Title and Arrow Container */}
-      <div className="absolute lg:top-16 flex items-center gap-4">
-        <h1
-          className="text-lg md:text-xl lg:text-3xl"
-          style={{
-            WebkitTextFillColor: "transparent",
-            WebkitTextStrokeWidth: "1px",
-          }}
-        >
-          Explore My Projects
-        </h1>
-        <FaLocationArrow className="md:h-[30px] md:w-[50px]" />
-      </div>
+          <div className="px-4 translate-y-6 lg:mx-20" data-aos="zoom-in-up">
+            <AnimatedButton>
+              <div className="flex justify-center">
+                <div
+                  className={`relative flex justify-center items-center text-center p-2 h-[150px] lg:min-w-full md:h-[155px] lg:h-[400px] cursor-pointer ${
+                    isDarkMode
+                      ? "bg-[#FFFFFF26] w-full hover:text-black"
+                      : "text-[#14213D] hover:text-[#14213d]"
+                  }`}
+                  onClick={() => navigate("/projects")}
+                >
+                  {/* Title and Arrow Container */}
+                  <div className="absolute top-6 lg:top-16 flex items-center gap-4">
+                    <h1
+                      className="text-lg md:text-xl lg:text-4xl"
+                      style={{
+                        WebkitTextFillColor: "transparent",
+                        WebkitTextStrokeWidth: "1px",
+                      }}
+                    >
+                      Explore My Projects
+                    </h1>
+                    <FaLocationArrow className="md:h-[30px] md:w-[50px]" />
+                  </div>
 
-      {/* Falling Project Cards */}
-      {projects.map((project) => (
-        <div
-          key={project}
-          className={`project-card hidden lg:block px-6 py-3 rounded-xl transform transition-transform hover:scale-105 ${
-            isProjectSectionVisible ? 'visible' : ''
-          } ${
-            isDarkMode
-              ? "bg-[#2A2A2A] text-[#E9E1B4] border border-[#E9E1B4]/30 hover:bg-[#363636]"
-              : "bg-white text-[#14213D] border border-gray-200 hover:bg-gray-50"
-          }`}
-        >
-          <span className="text-lg md:text-xl font-bold">
-            {project}
-          </span>
-        </div>
-      ))}
-    </div>
-  </div>
-</AnimatedButton>
+                  {/* Falling Project Cards */}
+                  {projects.map((project, index) => (
+                    <div
+                      key={project}
+                      className={`project-card lg:mr-20 ${
+                        index < 2 ? "show-mobile" : "hide-mobile"
+                      } -ml-14 md:-ml-0 px-3 md:px-6 py-3 rounded-xl transform transition-transform hover:scale-105 ${
+                        isProjectSectionVisible ? "visible" : ""
+                      } ${
+                        isDarkMode
+                          ? "bg-[#2A2A2A] text-[#E9E1B4] border border-[#E9E1B4]/30 hover:bg-[#363636]"
+                          : "bg-white text-[#14213D] border border-gray-200 hover:bg-gray-50"
+                      }`}
+                    >
+                      <span className="text-lg md:text-xl font-bold">
+                        {project}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimatedButton>
           </div>
         </section>
 
-        <section>
-          <AnimatedSection delay={0.5}>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 1.2,
-                delay: 0.6,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
-              <Testimonials />
-            </motion.div>
-          </AnimatedSection>
+        <section className="lg:py-32">
+          <Testimonials />
         </section>
         <div>
           <Scroll />

@@ -39,12 +39,12 @@ function RightScroll() {
   return (
     <>
       <div
-        className={`fixed right-0 top-2/3 flex flex-col items-center space-y-4 z-50 lg:h-[150px] lg:w-[70px] ${
+        className={`fixed right-0 top-2/3 flex flex-col items-center space-y-4 z-50 lg:h-[150px] lg:w-[70px]  ${
           isDarkMode ? "bg-[#ffffff53]" : "bg-[#14213D]"
-        } rounded-full p-2`}
+        } rounded-full p-2 md:p-4 lg:p-2`}
       >
         <div
-          className={`p-3 h-8 w-8 md:h-12 md:w-12 mt-3 rounded-full ${
+          className={`p-3 h-8 w-8 md:h-12 md:w-12 lg:mt-[11px] rounded-full ${
             isDarkMode ? "bg-[#E9E1B4]" : "bg-[#FFFCF2]"
           } hover:bg-gray-200 cursor-pointer flex items-center justify-center`}
           onClick={() => handleIconClick("phone")}

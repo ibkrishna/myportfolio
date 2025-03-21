@@ -4,7 +4,8 @@ const NavLinks = ({ isDarkMode, isMobile = false, activeItem, onNavClick }) => {
   const navItems = [
     { label: 'Home', href: '#' },
     { label: 'About Us', href: '#about' },
-    { label: 'Projects', href: '#projects' },
+    { label: 'My Works', href: '#projects' },
+    { label: "Services", path: "#service" },
     { label: 'Contact', href: '#contact' },
   ];
 
