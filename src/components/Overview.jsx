@@ -54,9 +54,9 @@ function Overview() {
                     : "rounded-2xl bg-[#14213d] text-[#ffffff]  hover:bg-[#F7F7F7] hover:border hover:border-[#14213d] hover:text-[#14213d]"
                 }`}
               >
-                <span className="text-lg">4+</span>
+                <span className="text-lg">2+</span>
                 <span className="text-xs text-left ml-2">
-                  Years <br /> Of Experience
+                  Years <br /> Experience
                 </span>
               </button>
             </div>
@@ -89,7 +89,7 @@ function Overview() {
               >
                 About Me
               </h1>
-              <h2 className="text-lg md:text-2xl lg:text-3xl mb-6 md:mt-4">
+              <h2 className="text-sm md:text-lg lg:text-xl mb-6 md:mt-4">
                 Elevating brands globally with innovative strategies and
                 visionary design
               </h2>

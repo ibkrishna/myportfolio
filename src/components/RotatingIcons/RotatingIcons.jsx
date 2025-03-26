@@ -5,6 +5,7 @@ import Hero from '../../assets/hero.png';
 import { SiLeetcode, SiCodechef } from "react-icons/si";
 import { LiaHackerrank } from "react-icons/lia";
 import { SiGeeksforgeeks } from "react-icons/si";
+// import balkrishnapandey from '../../assets/tech/balkrishnapandey.pdf';
 
 const RotatingIcons = () => {
   const { isDarkMode } = useTheme();
@@ -32,13 +33,13 @@ const RotatingIcons = () => {
   };
 
   const icons = [
-    { Icon: Github, name: 'GitHub', link: "https://github.com" },
-    { Icon: FileCode, name: 'Resume', link: "/resume" },
-    { Icon: SiCodechef, name: 'CodeChef', link: "/tech" },
-    { Icon: SiLeetcode, name: 'LeetCode', link: "/database" },
-    { Icon: LiaHackerrank, name: 'HackerRank', link: "/hackerrank" },
-    { Icon: SiGeeksforgeeks, name: 'GeeksforGeeks', link: "/hackerrank" },
-    { Icon: Linkedin, name: 'LinkedIn', link: "https://www.linkedin.com" },
+    { Icon: Github, name: 'GitHub', link: "https://github.com/ibkrishna" },
+    { Icon: FileCode, name: 'Resume', link: "/src/assets/balkrishnapandey.pdf" },
+    { Icon: SiCodechef, name: 'CodeChef', link: "https://www.codechef.com/users/ibkrishna" },
+    { Icon: SiLeetcode, name: 'LeetCode', link: "https://leetcode.com/u/ibkrishna/" },
+    { Icon: LiaHackerrank, name: 'HackerRank', link: "https://www.hackerrank.com/profile/ibkrishna" },
+    { Icon: SiGeeksforgeeks, name: 'GeeksforGeeks', link: "https://www.geeksforgeeks.org/user/ibkrishna/" },
+    { Icon: Linkedin, name: 'LinkedIn', link: "https://www.linkedin.com/in/balkrishnapandey/" },
     { Icon: Mail, name: 'Contact', link: "mailto:stackmastry@gmail.com" },
   ];
 

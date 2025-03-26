@@ -26,22 +26,25 @@ const Home = () => {
   const [isProjectSectionVisible, setIsProjectSectionVisible] = useState(false);
 
   const projects = [
-    "LiveScar",
-    "CareerLoom",
-    "SuperCard",
-    "ProjectX",
-    "DevFlow",
-    "CodeCraft",
-    "WebMaster",
-    "Portfolio",
-    "Shikshamitra",
-    "Shivam Trading",
-    "Marina Shipping",
-    "Playscape",
+    "LiveScare",
+    "Careerloom",
+    "Supercart",
+    "Innowide",
+    "Corplyx",
+    "Cateyes",
     "Katie",
+    "Portfolio",
+    "Epitozainfotech",
+    "Playscape",
+    "Shivdhara",
+    "Marina",
+    "Maxdigital",
+    "Ratnaban",
+    "cloudaxis",
+    
   ];
 
-  const text = "Shiva Raj";
+  const text = "Bal Krishna ";
   const [currentText, setCurrentText] = useState("");
   const [isAdding, setIsAdding] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
@@ -111,10 +114,13 @@ const Home = () => {
 
   const stats = [
     { value: "25+", label: "Clients" },
-    { value: "4+", label: "Years of Experience" },
+    { value: "2+", label: "Experience" },
   ];
 
-  const staticText = `Web development is essential in today’s digital world, involving front-end and back-end development. Front-end developers focus on the client-side, creating the elements users interact with using HTML, CSS, and JavaScript to ensure an engaging and responsive user experience. Back-end developers handle the server-side, using languages like PHP, Ruby, and Python to manage data, user authentication, and security. Full-stack developers are skilled in both areas, allowing them to create complete websites and applications.`;
+  const staticText = `Initiative-driven Software Development Engineer with experience in building web applications using React.js, JavaScript, and
+related technologies. Skilled in teamwork, implementing responsive designs, and ensuring cross-browser compatibility.
+Possesses analytical thinking and a commitment to delivering high-quality, user-focused products. Eager to contribute to
+innovative projects in a fast-paced environment`;
 
   const words = staticText.split(/\s+/);
   const maxWords = 75;
@@ -198,7 +204,7 @@ const Home = () => {
           </div>
         </section>
         <section>
-          <Overview />
+          {/* <Overview /> */}
         </section>
         <section>
           <Specialization />

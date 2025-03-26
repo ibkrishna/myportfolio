@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaTelegram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
 import { useTheme } from "../context/ThemeContext";
@@ -27,41 +27,40 @@ const Contact = () => {
     contactMethod: "",
   });
 
-  const text = "Let's Connect";  // New text
-const [currentText, setCurrentText] = useState("");
-const [isAdding, setIsAdding] = useState(true);
-const [isPaused, setIsPaused] = useState(false);
+  const text = "Let's Connect"; // New text
+  const [currentText, setCurrentText] = useState("");
+  const [isAdding, setIsAdding] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
 
-const intervalRef = useRef(null);
+  const intervalRef = useRef(null);
 
-useEffect(() => {
-  if (isPaused) return;
+  useEffect(() => {
+    if (isPaused) return;
 
-  intervalRef.current = setInterval(() => {
-    if (isAdding) {
-      setCurrentText((prevText) => {
-        const newText = text.slice(0, prevText.length + 1);
-        if (newText.length === text.length) {
-          setIsAdding(false);
-          setIsPaused(true);
-          setTimeout(() => setIsPaused(false), 500); // Pause after complete text
-        }
-        return newText;
-      });
-    } else {
-      setCurrentText((prevText) => {
-        const newText = prevText.slice(0, -1);
-        if (newText.length === 0) {
-          setIsAdding(true);
-        }
-        return newText;
-      });
-    }
-  }, 200); // Speed of the typing effect
+    intervalRef.current = setInterval(() => {
+      if (isAdding) {
+        setCurrentText((prevText) => {
+          const newText = text.slice(0, prevText.length + 1);
+          if (newText.length === text.length) {
+            setIsAdding(false);
+            setIsPaused(true);
+            setTimeout(() => setIsPaused(false), 500); // Pause after complete text
+          }
+          return newText;
+        });
+      } else {
+        setCurrentText((prevText) => {
+          const newText = prevText.slice(0, -1);
+          if (newText.length === 0) {
+            setIsAdding(true);
+          }
+          return newText;
+        });
+      }
+    }, 200); // Speed of the typing effect
 
-  return () => clearInterval(intervalRef.current);
-}, [isAdding, isPaused]);
-
+    return () => clearInterval(intervalRef.current);
+  }, [isAdding, isPaused]);
 
   const contactMethods = [
     {
@@ -117,7 +116,7 @@ useEffect(() => {
     switch (contactMethod) {
       case "whatsapp":
         window.open(
-          `https://wa.me/+9391137088?text=${encodeURIComponent(
+          `https://wa.me/+919511469185?text=${encodeURIComponent(
             contactMessage
           )}`,
           "_blank"
@@ -125,7 +124,9 @@ useEffect(() => {
         break;
       case "telegram":
         window.open(
-          `https://t.me/+9391137088?text=${encodeURIComponent(contactMessage)}`,
+          `https://t.me/+919511469185?text=${encodeURIComponent(
+            contactMessage
+          )}`,
           "_blank"
         );
         break;
@@ -345,12 +346,15 @@ useEffect(() => {
                 >
                   Message
                 </label>
+                
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={4}
-                  className={`w-full text-white bg-transparent p-1 border rounded-lg ${
+                  className={`w-full ${
+                    isDarkMode ? "text-white" : "text-black"
+                  } bg-transparent p-1 border rounded-lg ${
                     isDarkMode
                       ? "border-[#E9E1B4]"
                       : "text-[#14213d] border-[#14213d]"
@@ -371,7 +375,7 @@ useEffect(() => {
                       : "border-[#14213d] text-[#14213d]  hover:bg-[#F7F7F7] hover:border hover:border-[#14213d] hover:text-[#14213d]"
                   } py-4 px-6 rounded-full font-semibold flex items-center justify-center gap-2 transition-colors`}
                 >
-                  Discuss the project
+                  Click to Start the Project Discussion!
                   <RiSendPlaneLine className="w-5 h-5" />
                   <span
                     className={`fill-animation ${
@@ -394,7 +398,7 @@ useEffect(() => {
                 } text-lg text-center mb-6 lg:mt-6`}
                 style={{ fontFamily: "Inria Sans" }}
               >
-                Choose a contact method
+                Please select a contact method and fill the form.
               </h3>
               <div className="space-y-6 md:mt-8">
                 {contactMethods.map(({ id, label, icon }, index) => {
@@ -454,7 +458,7 @@ useEffect(() => {
                   : " border-[#14213d] text-[#14213d]  hover:bg-[#F7F7F7] hover:border hover:border-[#14213d] hover:text-[#14213d]"
               } py-4 px-6 rounded-full font-semibold flex items-center justify-center gap-2 transition-colors`}
             >
-              Discuss the project
+              Click to Start the Project Discussion!
               <RiSendPlaneLine className="w-5 h-5" />
               <span
                 className={`fill-animation ${

@@ -3,11 +3,11 @@ import CertificateBadge from './CertificateBadge';
 import { useTheme } from '../../context/ThemeContext';
 
 const certificates = [
-  { id: 1, title: "Project Management Professional", year: "2022", issuedBy: "Microsoft" },
-  { id: 2, title: "Agile Scrum Master", year: "2022", issuedBy: "Azure" },
+  { id: 1, title: "Computer System Security ", year: "2021", issuedBy: "IIT Kanpur" },
+  { id: 2, title: "Essential Python Programming", year: "2022", issuedBy: "CISCO" },
   { id: 3, title: "AWS Solutions Architect", year: "2022", issuedBy: "Google" },
   { id: 4, title: "Google Cloud Professional", year: "2022", issuedBy: "Google" },
-  { id: 5, title: "Azure DevOps Engineer", year: "2022", issuedBy: "Azure" },
+  { id: 5, title: "Complete Web Development", year: "2024", issuedBy: "Udemy" },
   { id: 6, title: "Digital Marketing", year: "2022", issuedBy: "Google" }
 ];
 

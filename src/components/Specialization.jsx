@@ -14,7 +14,7 @@ function Specialization() {
   const services = [
     {
       id: 1,
-      title: 'Web Development',
+      title: 'Full Stack Development',
       description: 'With experience in building dynamic, responsive web applications using React, Node.js and JavaScript, I specialize in delivering seamless digital experiences.',
       route: '/service/web-dev'
     },
@@ -26,7 +26,7 @@ function Specialization() {
     },
     {
       id: 3,
-      title: 'Full Stack Development',
+      title: 'Cloud Developer',
       description: 'Creating intuitive and engaging user interfaces with a focus on user experience and modern design principles.',
       route: '/service/devops'
     },
@@ -52,7 +52,7 @@ function Specialization() {
         Specialization
       </h1>
       <h1 className={`md:text-2xl py-6 mx-6 ${isDarkMode ? 'text-[#ffffff]' : 'text-[#14213d]'}`} style={{fontFamily:'Inria Sans'}}>
-        Our Services
+        {/* Our Services */}
       </h1>
       <div className="space-y-6">
         {services.map((service, index) => (
@@ -66,13 +66,13 @@ function Specialization() {
                 {service.title}
               </h2>
               <div className="flex items-center gap-6 lg:gap-10">
-                <Link
+                {/* <Link
                   to={service.route}
                   className={`hidden md:flex md:block px-4 py-2  lg:py-3 text-xs lg:text-lg rounded-full ${isDarkMode ? 'bg-[#e9e1b4] text-[#14213d] hover:bg-[#ffffff]/[0.15] hover:text-white hover:border hover:border-[#E9E1B4]' : 'bg-[#14213d] text-[white]  hover:bg-[#F7F7F7] hover:border hover:border-[#14213d] hover:text-[#14213d]'} flex items-center gap-2`} style={{fontFamily:'Inria Sans'}}
                 >
                   Offered Services
                   <GoArrowUpRight size={16} />
-                </Link>
+                </Link> */}
                 <Link
                   to={service.route}
                   className={`md:hidden md:w-auto px-4 p-1 md:px-4 md:py-2 text-xs lg:text-lg rounded-full ${isDarkMode ? ' text-[#ffffff] hover:bg-[#c3c0b1]' : ' text-[#14213d] hover:bg-[#c6c2b5]'} flex items-center gap-2`} style={{fontFamily:'Inria Sans'}}

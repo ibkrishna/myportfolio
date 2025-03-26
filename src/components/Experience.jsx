@@ -1,51 +1,53 @@
 import React from "react";
 import { useTheme } from "../context/ThemeContext";
-import Amazon from "../assets/amazon.png";
-import Flipkart from "../assets/flipkart.png";
-import Microsoft1 from "../assets/microsoft1.jpg";
+import corplyx from "../assets/corplyx.png";
+import alias from "../assets/Alias.jpg";
+import innowide from "../assets/innowide.png";
 
 const Experience = () => {
   const { isDarkMode } = useTheme();
 
   const experiences = [
     {
-      year: "December 2024 - December 2024",
+      year: "August 2024 - Present",
       title: [
-        "Senior Frontend Developer",
+        "Software Development Engineer",
       ],
-      company: "Microsoft",
+      company: "Innowide Technologies Pvt. Ltd.",
       description: [
-        "Led the redesign of enterprise applications, enhancing performance by 30%. Focused on React.js and TypeScript to create scalable, high-performance user interfaces.",
-        "Implemented CI/CD pipelines reducing deployment time by 40%.",
-        "Mentored junior developers and conducted code reviews to maintain code quality.",
+        "Spearheaded the development of 5+ full-stack web applications using MERN stack (React.js, Node.js, MongoDB), increasing application deployment efficiency by 30% Spearheaded the development of 5+ full-stack web applications using MERN stack (React.js, Node.js, MongoDB), increasing application deployment efficiency by 30%",
+        "Collaborated with UI/UX designers, product managers, and developers to deliver scalable software solutions, leading to a 15% reduction in project delivery time",
+        "Designed and implemented responsive UIs, improving mobile user satisfaction by 20% and reducing load time across devices by 10%",
+        "Conducted 50+ code reviews, resulting in a 25% reduction in code defects and enhanced team collaboration",
       ],
-      logo: Amazon,
+      logo:innowide,
     },
     {
-      year: "2019-2022",
+      year: "June 2023 - July 2024",
       title: [
-        "UX Researcher",
+        "Software Developer",
       ],
-      company: "Amazon",
+      company: "Corplyx Technologies Pvt. Ltd.",
       description: [
-        "Conducted user research to refine the shopping experience. Focused on improving usability by analyzing user behavior and providing insights to optimize designs.",
-        "Increased user engagement by 25% through data-driven UX improvements.",
-        "Led a team of 5 researchers in conducting usability studies.",
+        "Assembled and maintained 10+ React.js web applications, reducing development bugs by 30% through code optimization.",
+        "Integrated Material-UI and React Bootstrap to enhance the visual appeal and responsiveness of web designs, increasing customer engagement by 18%",
+        "Managed state efficiently using React Redux and Redux Toolkit in complex applications, enhancing app performance by 20%.",
+        "Optimized responsive design and cross-browser compatibility, improving user satisfaction by 15% and reducing bounce rates.",
       ],
-      logo: Flipkart,
+      logo: corplyx,
     },
     {
-      year: "2018-2019",
+      year: "March 2023 - May 2023",
       title: [
-        "Full Stack Developer",
+        "Software Engineer Intern"
       ],
-      company: "Flipkart",
+      company: "Alias Tech Solutions ",
       description: [
-        "Designed and launched e-commerce platforms utilizing Node.js and React for seamless functionality and user experience.",
-        "Focused on performance optimization and security enhancements to ensure a seamless user experience.",
-        "Reduced page load time by 45% through optimization techniques.",
+        "Produced React.js applications, improving code quality and scalability, and reducing maintenance costs by 12%.",
+        "Collaborated with design and development teams, delivering user-centered products that increased client satisfaction by20%",
+        " Integrated user authentication and real-time notifications using Socket.io, reducing user sign-up time by 25%",
       ],
-      logo: Microsoft1,
+      logo:alias,
     },
   ];
 

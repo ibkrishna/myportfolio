@@ -5,29 +5,25 @@ import ProjectList from "./ProjectList";
 import Scroll from "../scroll/RightScroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import Ecomdark from "../../assets/ecomlight.png";
 import Ecomlight from "../../assets/ecomlight1.png";
 import Ecomdark from '../../assets/Ecommerce.png';
 import Careerloom from '../../assets/carrerloom.png';
 import LivesCarelight from '../../assets/livescaredark.png';
 import LivesCareDark from '../../assets/livescaredark.png';
-// import shippingdark from "../../assets/shippingdark.jpg";
-// import shippinglight from "../../assets/shippinglight.jpg";
-// import sabjidark from "../../assets/sabjidark.jpg";
-// import sabjilight from "../../assets/sabjilight.jpg";
+
 
 const projectsData = [
   {
     id: 1,
-    title: "Ecommerce ",
+    title: "Suparcart ",
     description:
     "Developed a high-performance e-commerce platform with an intuitive UI, real-time product filtering, and a dynamic cart system. Ensured seamless navigation and secure transactions for an optimized shopping experience.",
     imageDark: Ecomdark,
     imageLight: Ecomdark,
     category: "Website",
     link: "#",
-    github: "https://github.com/username/portfolio",
-    tags: "Next.js,Mongodb, Node.js, Express.js, Redux, Responsive",
+    github: "https://github.com/ibkrishna/Suparcart",
+    tags: " HTML, CSS, Tailwind, Next.js,Mongodb, Node.js, Express.js, Redux, Responsive, Auth",
   },
   {
     id: 2,
@@ -38,7 +34,7 @@ const projectsData = [
     imageLight: Careerloom,
     category: "Website",
     link: "#",
-    github: "https://github.com/username/portfolio",
+    github: "https://github.com/ibkrishna/careerloom",
     tags: "HTMX,Mongodb, Node.js, Express.js, Redux, Responsive",
   },
   {
@@ -66,7 +62,7 @@ const Projects = () => {
     activeFilter === "All" ? true : project.category === activeFilter
   );
 
-  const text = "Let's Explore My Crafting Excellence";  
+  const text = "See How We've Transformed Ideas into Reality";  
   const [currentText, setCurrentText] = useState("");
   const [isAdding, setIsAdding] = useState(true);
   const [isPaused, setIsPaused] = useState(false);

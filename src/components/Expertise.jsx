@@ -29,12 +29,25 @@ function Expertise() {
   const webDevelopment = [
     { img: HTML, color: "text-orange-400", name: "Html", progress: 50 },
     { img: CSS, color: "text-blue-600", name: "Css", progress: 60 },
+    { img: CSS, color: "text-blue-600", name: "Tailwind", progress: 60 },
+    { img: CSS, color: "text-blue-600", name: "Bootstrap", progress: 60 },
+    { img: CSS, color: "text-blue-600", name: "Matrial UI", progress: 60 },
     { img: JavaScript, color: "text-yellow-400", name: "JavaScript", progress: 70 },
+    { img: JavaScript, color: "text-yellow-400", name: "JQuery", progress: 70 },
+    { img: JavaScript, color: "text-yellow-400", name: "Web Sockets", progress: 70 },
     { img: Reactjs, color: "text-cyan-400", name: "React.js", progress: 75 },
+    { img: Reactjs, color: "text-cyan-400", name: "Redux", progress: 75 },
     { img: Nodejs, color: "text-green-700", name: "Node.js", progress: 60 },
+    { img: Nodejs, color: "text-green-700", name: "Express.js", progress: 60 },
     { img: Mongodb, color: "text-green-400", name: "MongoDB", progress: 65 },
-    { img: Tailwind, color: "text-cyan-500", name: "Tailwind Css", progress: 75 },
+    { img: Mongodb, color: "text-green-400", name: "Mongoose", progress: 65 },
+    { img: Mongodb, color: "text-green-400", name: "prisma", progress: 65 },
+    { img: Tailwind, color: "text-cyan-500", name: "SQL", progress: 75 },
+    { img: Tailwind, color: "text-cyan-500", name: "MySQL", progress: 75 },
+    { img: Tailwind, color: "text-cyan-500", name: "PostgreSQL", progress: 75 },
+    { img: Redux, color: "text-purple-600", name: "Typescript", progress: 70 },
     { img: Redux, color: "text-purple-600", name: "Next.js", progress: 70 },
+    { img: JavaScript, color: "text-yellow-400", name: "Web3.js", progress: 70 },
   ];
 
   const digitalMarketing = [

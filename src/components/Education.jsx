@@ -9,18 +9,18 @@ const Education = () => {
 
   const educationData = [
     {
-      degree: "MSc in Computer Science, University College London",
+      degree: "B.Tech in Computer Science Engineering",
       college:
-        "University College London sjkdhfjs df sdha dfhs dfjsdhf asjdf f shd fjhsd f sjda dfdsfhdf sdfjs dfh sjdf  sdf ",
+        "Dr. A.P.J. Abdul Kalam Technical University",
     },
-    {
-      degree: "BSc Maths and Physics, Imperial College London",
-      college: "Imperial College London sjkdhfjs df sdha dfhs dfjsdhf asjdf f shd fjhsd f sjda dfdsfhdf sdfjs dfh sjdf  sdf ",
-    },
-    {
-      degree: "MSc in Computer Science, University College London",
-      college: "University College London sjkdhfjs df sdha dfhs dfjsdhf asjdf f shd fjhsd f sjda dfdsfhdf sdfjs dfh sjdf  sdf ",
-    },
+    // {
+    //   degree: "BSc Maths and Physics, Imperial College London",
+    //   college: "Imperial College London sjkdhfjs df sdha dfhs dfjsdhf asjdf f shd fjhsd f sjda dfdsfhdf sdfjs dfh sjdf  sdf ",
+    // },
+    // {
+    //   degree: "MSc in Computer Science, University College London",
+    //   college: "University College London sjkdhfjs df sdha dfhs dfjsdhf asjdf f shd fjhsd f sjda dfdsfhdf sdfjs dfh sjdf  sdf ",
+    // },
   ];
 
   useEffect(() => {

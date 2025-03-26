@@ -5,14 +5,14 @@ import { useTheme } from '../context/ThemeContext';
 const testimonials = [
   {
     name: 'Riya',
-    role: 'Digital Marketing',
+    role: 'CEO Cateyes',
     feedback: 'The final product was stunning, and Shiva Raj was a joy to work with. I look forward to our next project together!',
     image: 'https://via.placeholder.com/100',
   },
   {
     name: 'Aryan',
-    role: 'Web Developer',
-    feedback: 'Shiva Raj provided exceptional service and delivered the project on time with great quality.',
+    role: 'Product Manager',
+    feedback: 'Bal Krishna provided exceptional service and delivered the project on time with great quality.',
     image: 'https://via.placeholder.com/100',
   },
   {

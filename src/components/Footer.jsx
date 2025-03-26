@@ -54,14 +54,15 @@ const ContactFooter = () => {
                 alt="Animated GIF"
               />
               <h2 className={`md:text-2xl lg:text-5xl ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#FFFCF2]'}`}>
-                Want to know more?
+                {/* Want to know more? */}
+                Interested in more details
               </h2>
             </div>
             <p
               className={`lg:mt-8 text-center md:text-start text-md w-[250px] translate-x-3 md:translate-x-0 md:text-lg lg:w-[400px] mb-6 flex items-center justify-center rounded-sm md:py-2 mt-4 cursor-pointer 
                 ${isDarkMode ? 'border-[#E9E1B4] text-white bg-[#A0A08338]' : 'border-[#434D61] bg-[#434D61] text-[#FFFCF2]'}`} onClick={() => navigate('/contact')}
             >
-              Let's Discuss The Project!
+              Let's Talk About It!
               <IoIosArrowRoundForward className='h-8 w-8' />
             </p>
             <hr className={`lg:w-[600px] w-full my-6 ${isDarkMode ? 'border-[#E9E1B4]' : 'border-[#FFFCF2]'} mx-auto`} />
@@ -74,23 +75,24 @@ const ContactFooter = () => {
               <label className=" lg:text-2xl cursor-pointer hover:underline" onClick={() => navigate('/projects')}>My Works | </label>
               <label className=" lg:text-2xl cursor-pointer hover:underline" onClick={() => navigate('/blog')}>Blog | </label>
               <div className="md:gap-4 flex md:items-center justify-evenly mt-6 md:mt-0">
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/_ibkrishna/" target="_blank" rel="noopener noreferrer">
                   <AiOutlineInstagram className="text-xl lg:text-3xl hover:text-[#E9E1B4]" />
                 </a>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/balkrishna.pandey.3591267" target="_blank" rel="noopener noreferrer">
                   <MdFacebook className="text-xl lg:text-3xl hover:text-[#E9E1B4]" />
                 </a>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/mebkrishna" target="_blank" rel="noopener noreferrer">
                   <RiTwitterXFill className="text-xl lg:text-3xl hover:text-[#E9E1B4]" />
-                </a><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                  <IoLogoReddit className="text-xl lg:text-3xl hover:text-[#E9E1B4]" />
                 </a>
+                {/* <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                  <IoLogoReddit className="text-xl lg:text-3xl hover:text-[#E9E1B4]" />
+                </a> */}
               </div>
             </div>
           </div>
           <div className="text-start mt-6 lg:mt-14">
             <p className={`text-sm text-center lg:text-xl md:text-start ${isDarkMode ? 'text-[#E9E1B4]' : 'text-[#FFFCF2]'}`}>
-              Created by Shivaraj | All Reserved!
+              Created by ibkrishna | All Reserved!
             </p>
           </div>
         </div>

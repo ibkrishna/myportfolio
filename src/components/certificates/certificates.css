@@ -71,7 +71,7 @@
 }
 
 .certificates-wrapper {
-  backdrop-filter: blur(10px);
+  backdrop-filter:blur(10px);
   border-radius: 20px;
   padding: 2rem;
   perspective: 2000px;

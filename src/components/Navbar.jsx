@@ -154,7 +154,7 @@ const Navbar = () => {
                 }`}
                 onClick={() => navigate("/contact")}
               >
-                <h1 className="text-md lg:text-md lg:px-3">Book a Demo</h1>
+                <h1 className="text-md lg:text-md lg:px-3">Let's Start</h1>
                 <MdArrowOutward className="md:text-lg lg:mx-3 lg:-ml-2" />
               </button>
 

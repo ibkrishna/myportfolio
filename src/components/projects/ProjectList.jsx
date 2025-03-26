@@ -9,7 +9,7 @@ const ProjectList = () => {
 
   const projectData = [
     {
-      title: "Personal Portfolio Website",
+      title: "Personal Portfolio ",
       description:
         "Built a sleek and interactive portfolio to showcase skills, projects, and achievements. Features a minimalist design, smooth animations, and a dark mode toggle for an enhanced user experience.",
       technologies: ["React", "Tailwind CSS", "Node.js"],
@@ -17,7 +17,7 @@ const ProjectList = () => {
       github: "https://github.com/username/portfolio",
     },
     {
-      title: "E-commerce Platform",
+      title: "Innowide Website",
       description:
         "Developed a full-fledged online shopping platform with secure authentication, personalized recommendations, and real-time order tracking.",
       technologies: ["React", "Redux", "Firebase"],
@@ -25,7 +25,79 @@ const ProjectList = () => {
       github: "https://github.com/username/ecommerce",
     },
     {
-      title: "Weather App",
+      title: "Cateyesentertainment Website",
+      description:
+        "Created an advanced weather forecasting app providing real-time temperature, humidity, and precipitation data. Integrated geolocation for automatic location-based updates.",
+      technologies: ["React", "OpenAPI", "Redux"],
+      link: "https://weatherapp.example.com",
+      github: "https://github.com/username/weather-app",
+    },
+    {
+      title: "Katieentertainment Website",
+      description:
+        "Built a sleek and interactive portfolio to showcase skills, projects, and achievements. Features a minimalist design, smooth animations, and a dark mode toggle for an enhanced user experience.",
+      technologies: ["React", "Tailwind CSS", "Node.js"],
+      link: "https://portfolio.example.com",
+      github: "https://github.com/username/portfolio",
+    },
+    {
+      title: "Corplyx Website ",
+      description:
+        "Developed a full-fledged online shopping platform with secure authentication, personalized recommendations, and real-time order tracking.",
+      technologies: ["React", "Redux", "Firebase"],
+      link: "https://ecommerce.example.com",
+      github: "https://github.com/username/ecommerce",
+    },
+    {
+      title: "Epitozainfotech Website",
+      description:
+        "Created an advanced weather forecasting app providing real-time temperature, humidity, and precipitation data. Integrated geolocation for automatic location-based updates.",
+      technologies: ["React", "OpenAPI", "Redux"],
+      link: "https://weatherapp.example.com",
+      github: "https://github.com/username/weather-app",
+    },
+    {
+      title: "Playscapeshippers Website",
+      description:
+        "Built a sleek and interactive portfolio to showcase skills, projects, and achievements. Features a minimalist design, smooth animations, and a dark mode toggle for an enhanced user experience.",
+      technologies: ["React", "Tailwind CSS", "Node.js"],
+      link: "https://portfolio.example.com",
+      github: "https://github.com/username/portfolio",
+    },
+    {
+      title: "Shivdharalogistic Website",
+      description:
+        "Developed a full-fledged online shopping platform with secure authentication, personalized recommendations, and real-time order tracking.",
+      technologies: ["React", "Redux", "Firebase"],
+      link: "https://ecommerce.example.com",
+      github: "https://github.com/username/ecommerce",
+    },
+    {
+      title: "Marinashipping Website",
+      description:
+        "Created an advanced weather forecasting app providing real-time temperature, humidity, and precipitation data. Integrated geolocation for automatic location-based updates.",
+      technologies: ["React", "OpenAPI", "Redux"],
+      link: "https://weatherapp.example.com",
+      github: "https://github.com/username/weather-app",
+    },
+    {
+      title: "Maxdigitalsolution Website",
+      description:
+        "Built a sleek and interactive portfolio to showcase skills, projects, and achievements. Features a minimalist design, smooth animations, and a dark mode toggle for an enhanced user experience.",
+      technologies: ["React", "Tailwind CSS", "Node.js"],
+      link: "https://portfolio.example.com",
+      github: "https://github.com/username/portfolio",
+    },
+    {
+      title: "Ratnabanlogistics Website",
+      description:
+        "Developed a full-fledged online shopping platform with secure authentication, personalized recommendations, and real-time order tracking.",
+      technologies: ["React", "Redux", "Firebase"],
+      link: "https://ecommerce.example.com",
+      github: "https://github.com/username/ecommerce",
+    },
+    {
+      title: "cloudaxis Website",
       description:
         "Created an advanced weather forecasting app providing real-time temperature, humidity, and precipitation data. Integrated geolocation for automatic location-based updates.",
       technologies: ["React", "OpenAPI", "Redux"],
@@ -71,7 +143,7 @@ const ProjectList = () => {
             isDarkMode ? "text-[#E3D5A7]" : "text-[#14213D]"
           }`}
         >
-          List Of Projects
+          A Curated List of Our Impactful Projects
         </h2>
         <div className={`space-y-6`}>
           {projectData.map((item, index) => (
