@@ -41,10 +41,9 @@ const Home = () => {
     "Maxdigital",
     "Ratnaban",
     "cloudaxis",
-    
   ];
 
-  const text = "Bal Krishna ";
+  const text = "Bal Krishna";
   const [currentText, setCurrentText] = useState("");
   const [isAdding, setIsAdding] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
@@ -142,19 +141,22 @@ innovative projects in a fast-paced environment`;
                 <h2
                   data-aos="fade-up"
                   className={`text-2xl mb-2 ${
-                    isDarkMode ? "text-[#E9E1B4]" : "text-[#14213D]"
+                    isDarkMode ? "text-[#E9E1B4]" : "text-[#040609]"
                   } `}
                 >
                   Hi,
                 </h2>
                 <h1
-                  className="text-4xl md:text-6xl font-bold mb-6 text-[#14213D] dark:text-[#E9E1B4]"
-                  data-aos="fade-up"
+                  // className="text-4xl md:text-6xl font-bold mb-6 text-[#14213D]: dark:text-[#4269ad]"
+                  // data-aos="fade-up"
+                  className={`text-4xl md:text-6xl font-bold mb-6 ${isDarkMode ? "text-[#E9E1B4]" : "text-[#14213D]"}`}
+  data-aos="fade-up"
                 >
                   {"I'm"}{" "}
-                  <span className="text-[#14213D] dark:text-[#E9E1B4]">
-                    {currentText}
-                  </span>
+                  
+                  <span className={` ${isDarkMode ? "text-[#E9E1B4]" : "text-[#14213D]"}`}>
+  {currentText}
+</span>
                   <RotatingText />
                 </h1>
                 <p
@@ -204,7 +206,7 @@ innovative projects in a fast-paced environment`;
           </div>
         </section>
         <section>
-          {/* <Overview /> */}
+          <Overview />
         </section>
         <section>
           <Specialization />

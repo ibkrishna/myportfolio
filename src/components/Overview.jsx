@@ -13,13 +13,13 @@ function Overview() {
   const services = [
     {
       id: 1,
-      title: `What's our mission ?`,
+      title: `JavaScript`,
       description:
         "With experience in building dynamic, responsive web applications using React, Node.js and JavaScript, I specialize in delivering seamless digital experiences.",
     },
     {
       id: 2,
-      title: "Our culture & our studio",
+      title: "Python",
       description:
         "Comprehensive digital marketing solutions including SEO, social media management, and content strategy to boost your online presence.",
     },
@@ -87,7 +87,7 @@ function Overview() {
                 }`}
                 style={{ fontFamily: "Inria Sans" }}
               >
-                About Me
+                 Programming Language Expertise
               </h1>
               <h2 className="text-sm md:text-lg lg:text-xl mb-6 md:mt-4">
                 Elevating brands globally with innovative strategies and

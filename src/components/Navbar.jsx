@@ -23,7 +23,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "My Works", path: "/projects" },
-    { label: "Services", path: "/service" },
+    // { label: "Services", path: "/service" },
     { label: "Contact", path: "/contact" },
   ];
 

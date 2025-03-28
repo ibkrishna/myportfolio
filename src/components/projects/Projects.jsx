@@ -21,9 +21,9 @@ const projectsData = [
     imageDark: Ecomdark,
     imageLight: Ecomdark,
     category: "Website",
-    link: "#",
+    link: "https://suparcart.web.app",
     github: "https://github.com/ibkrishna/Suparcart",
-    tags: " HTML, CSS, Tailwind, Next.js,Mongodb, Node.js, Express.js, Redux, Responsive, Auth",
+    tags: " HTML, CSS, Tailwind,React.js ,  Next.js,Mongodb, Node.js, Express.js, Redux, Responsive, Auth , Payment",
   },
   {
     id: 2,
@@ -33,9 +33,9 @@ const projectsData = [
     imageDark: Careerloom,
     imageLight: Careerloom,
     category: "Website",
-    link: "#",
+    link: "https://careerloom-i.web.app",
     github: "https://github.com/ibkrishna/careerloom",
-    tags: "HTMX,Mongodb, Node.js, Express.js, Redux, Responsive",
+    tags: "HTML, React.js, CSS, Tailwind CSS, Mongodb, Node.js, Express.js, Redux, Responsive , Auth , JWT Token",
   },
   {
     id: 3,
@@ -45,9 +45,9 @@ const projectsData = [
     imageDark: LivesCareDark,
     imageLight: LivesCarelight,
     category: "Website",
-    link: "#",
-    github: "https://github.com/username/portfolio",
-    tags: "React.js, MongoDb, Redux, Node.js, Express.js",
+    link: "https://livescare-i.web.app/",
+    github: "https://github.com/ibkrishna/LivesCare",
+    tags: " JSX, CSS, Tailwind CSS, React.js, MongoDb, Redux, Node.js, Express.js, Payment, Vite",
   },
  
 ];

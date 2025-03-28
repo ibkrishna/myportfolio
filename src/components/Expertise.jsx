@@ -6,7 +6,7 @@ import HTML from "../assets/tech/html.png";
 import CSS from "../assets/tech/css.png";
 import JavaScript from "../assets/tech/javascript.png";
 import Reactjs from "../assets/tech/reactjs.png";
-import Redux from "../assets/tech/redux.png";
+// import Redux from "../assets/tech/redux.png";
 import Tailwind from "../assets/tech/tailwind.png";
 import Nodejs from "../assets/tech/nodejs.png";
 import Mongodb from "../assets/tech/mongodb.png";
@@ -14,12 +14,34 @@ import SEO from "../assets/tech/seo.png";
 import SocialMedia from "../assets/tech/socialmedia.png";
 import Analytics from "../assets/tech/analytics.png";
 import Content from "../assets/tech/content.png";
-import Email from "../assets/tech/email.png";
+import Email from "../assets/tech/Email.jpg";
 import PPC from "../assets/tech/ppc.png";
 import Strategy from "../assets/tech/strategy.png";
 import Figma from "../assets/tech/figma.png";
 import Photoshop from "../assets/tech/photoshop.png";
 import Adobe from "../assets/tech/adobe.png";
+import AWS from "../assets/AWS.png";
+import Github from "../assets/Github.png";
+import Git from "../assets/Git.png";
+import Azure from "../assets/Azure.png";
+import Jira from "../assets/Jira.png";
+import Kubernetes from "../assets/Kubernetes.png";
+import tailwind from "../assets/tech/tailwind.png";
+import Bootstrap from "../assets/tech/Bootstrap.png";
+import Material from "../assets/tech/materialui.png";
+import Jquery from "../assets/tech/Jquery.png";
+import Websocket from "../assets/tech/Websockets.png";
+import Redux from "../assets/tech/Reduxlogo.jpg";
+import Express from "../assets/tech/express.jpg"
+import Mongoose from "../assets/tech/mongoose.jpeg"
+import Presma from "../assets/tech/prisma.jpg"
+import SQL from "../assets/tech/SQL.png";
+import Mysql from "../assets/tech/Mysql.png";
+import Postgresql from "../assets/tech/PostGreSQL.jpg";
+import Typescript from "../assets/tech/typescript.png";
+import Next from "../assets/tech/Next.png";
+import Web from "../assets/tech/web3.png"
+
 
 function Expertise() {
   const { isDarkMode } = useTheme();
@@ -28,58 +50,102 @@ function Expertise() {
 
   const webDevelopment = [
     { img: HTML, color: "text-orange-400", name: "Html", progress: 50 },
-    { img: CSS, color: "text-blue-600", name: "Css", progress: 60 },
-    { img: CSS, color: "text-blue-600", name: "Tailwind", progress: 60 },
-    { img: CSS, color: "text-blue-600", name: "Bootstrap", progress: 60 },
-    { img: CSS, color: "text-blue-600", name: "Matrial UI", progress: 60 },
-    { img: JavaScript, color: "text-yellow-400", name: "JavaScript", progress: 70 },
-    { img: JavaScript, color: "text-yellow-400", name: "JQuery", progress: 70 },
-    { img: JavaScript, color: "text-yellow-400", name: "Web Sockets", progress: 70 },
+    { img: CSS, color: "text-blue-600", name: "CSS", progress: 60 },
+    { img: tailwind, color: "text-cyan-600", name: "Tailwind", progress: 60 },
+    // { img: Bootstrap, color: "text-blue-600", name: "Bootstrap", progress: 60 },
+    { img: Material, color: "text-indigo-400", name: "Matrial UI", progress: 60 },
+    {
+      img: JavaScript,
+      color: "text-yellow-400",
+      name: "JavaScript",
+      progress: 70,
+      
+    },
+    { img: Jquery, color: "text-blue-500", name: "JQuery", progress: 70 },
+    {
+      img:Websocket,
+      color: "text-amber-600",
+      name: "Web Sockets",
+      progress: 70,
+    },
     { img: Reactjs, color: "text-cyan-400", name: "React.js", progress: 75 },
-    { img: Reactjs, color: "text-cyan-400", name: "Redux", progress: 75 },
-    { img: Nodejs, color: "text-green-700", name: "Node.js", progress: 60 },
-    { img: Nodejs, color: "text-green-700", name: "Express.js", progress: 60 },
+    { img: Redux, color: "text-purple-950", name: "Redux", progress: 75 },
+    { img: Nodejs, color: "text-emerald-900", name: "Node.js", progress: 60 },
+    { img: Express, color: "text-neutral-900", name: "Express.js", progress: 60 },
     { img: Mongodb, color: "text-green-400", name: "MongoDB", progress: 65 },
-    { img: Mongodb, color: "text-green-400", name: "Mongoose", progress: 65 },
-    { img: Mongodb, color: "text-green-400", name: "prisma", progress: 65 },
-    { img: Tailwind, color: "text-cyan-500", name: "SQL", progress: 75 },
-    { img: Tailwind, color: "text-cyan-500", name: "MySQL", progress: 75 },
-    { img: Tailwind, color: "text-cyan-500", name: "PostgreSQL", progress: 75 },
-    { img: Redux, color: "text-purple-600", name: "Typescript", progress: 70 },
-    { img: Redux, color: "text-purple-600", name: "Next.js", progress: 70 },
-    { img: JavaScript, color: "text-yellow-400", name: "Web3.js", progress: 70 },
+    { img: Mongoose, color: "text-emerald-300", name: "Mongoose", progress: 65 },
+    { img: Presma, color: "text-sky-800", name: "prisma", progress: 65 },
+    { img: SQL, color: "text-blue-500", name: "SQL", progress: 75 },
+    { img: Mysql, color: "text-sky-950", name: "MySQL", progress: 75 },
+    { img: Postgresql, color: "text-yellow-300", name: "PostgreSQL", progress: 75 },
+    { img: Typescript, color: "text-blue-700", name: "Typescript", progress: 70 },
+    { img: Next, color: "text-sky-950", name: "Next.js", progress: 70 },
+    {
+      img: Web,
+      color: "text-sky-400",
+      name: "Web3.js",
+      progress: 70,
+    },
+  ];
+  
+  const digitalMarketing = [
+    { img:Git, color: "text-red-800", name: "Git", progress: 80},
+    { img: Github, color: "text-blue-400", name: "Github", progress: 40 },
+    { img: AWS, color: "text-yellow-400", name: "AWS", progress: 55 },
+    { img:Azure, color: "text-cyan-500", name: "Azure", progress: 70 },
+    // { img: Email, color: "text-yellow-400", name: "GCP", progress: 50 },
+    { img:Kubernetes, color: "text-blue-400", name: "Kubernaties", progress: 55 },
+    { img:Jira, color: "text-sky-400", name: "Jira", progress: 65 },
+    { img: Figma, color: "text-fuchsia-800", name: "Figma", progress: 65 },
   ];
 
-  const digitalMarketing = [
-    { img: SEO, color: "text-yellow-400", name: "SEO", progress: 65 },
-    { img: SocialMedia, color: "text-blue-400", name: "Social Media", progress: 60 },
-    { img: Analytics, color: "text-green-400", name: "Analytics", progress: 55 },
+  const uiUxDevelopment = [
+    // { img: Photoshop, color: "text-yellow-400", name: "UI Design", progress: 40 },
+    // { img: Figma, color: "text-blue-400", name: "Figma", progress: 65 },
+    // { img: Adobe, color: "text-green-400", name: "Wireframing", progress: 50 },
+    { img: SEO, color: "text-yellow-400", name: "SEO", progress: 85 },
+    {
+      img: SocialMedia,
+      color: "text-blue-400",
+      name: "Social Media",
+      progress: 40,
+    },
+    {
+      img: Analytics,
+      color: "text-green-400",
+      name: "Analytics",
+      progress: 55,
+    },
     { img: Content, color: "text-blue-200", name: "Content", progress: 70 },
-    { img: Email, color: "text-yellow-400", name: "Email Marketing", progress: 50 },
+    {
+      img: Email,
+      color: "text-yellow-400",
+      name: "Email Marketing",
+      progress: 50,
+    },
     { img: PPC, color: "text-blue-400", name: "PPC", progress: 55 },
     { img: Strategy, color: "text-green-400", name: "Strategy", progress: 65 },
   ];
 
-  const uiUxDevelopment = [
-    { img: Photoshop, color: "text-yellow-400", name: "UI Design", progress: 40 },
-    { img: Figma, color: "text-blue-400", name: "Figma", progress: 65 },
-    { img: Adobe, color: "text-green-400", name: "Wireframing", progress: 50 },
-  ];
-
   const digitalMarketing1 = [
-    { img: SEO, color: "text-yellow-400", name: "SEO", progress: 85 },
-    { img: SocialMedia, color: "text-blue-400", name: "Social Media", progress: 40 },
-    { img: Analytics, color: "text-green-400", name: "Analytics", progress: 55 },
+    // {
+    //   img: Photoshop,
+    //   color: "text-yellow-400",
+    //   name: "UI Design",
+    //   progress: 40,
+    // },
+    
+    // { img: Adobe, color: "text-green-400", name: "Wireframing", progress: 50 },
   ];
 
   const sections = [
     { title: "Web Development Expertise", icons: webDevelopment },
-    { title: "Digital Marketing Expertise", icons: digitalMarketing },
+    { title: "Cloud & UI Expertise", icons: digitalMarketing },
   ];
 
   const section1 = [
-    { title: "UI/UX Development Expertise", icons: uiUxDevelopment },
-    { title: "Digital Marketing Expertise", icons: digitalMarketing1 },
+    { title: "Digital Marketing Expertise", icons: uiUxDevelopment },
+    // { title: "Digital Marketing Expertise", icons: digitalMarketing1 },
   ];
 
   useEffect(() => {
@@ -146,7 +212,7 @@ function Expertise() {
             ))}
           </div>
 
-           {/**if you want to remove First part comment from here  **/}
+          {/**if you want to remove First part comment from here  **/}
 
           <div className="w-full py-24">
             <div
@@ -163,8 +229,8 @@ function Expertise() {
                   className="text-xl md:text-4xl font-semibold mb-4"
                   style={{ fontFamily: "Inter" }}
                 >
-                  Have a vision for a project but need the right expertise to bring
-                  it to reality?
+                  Have a vision for a project but need the right expertise to
+                  bring it to reality?
                 </h2>
                 <h2 className="text-xl md:text-4xl font-medium mb-4">
                   Let's connect and make it happen!
@@ -173,26 +239,27 @@ function Expertise() {
                   className="md:text-xl mb-6 md:max-w-3xl lg:max-w-5xl mx-auto md:mt-6"
                   style={{ fontFamily: "Inter" }}
                 >
-                  "Reach out to us today to discuss your project ideas and discover
-                  how our innovative solutions can bring your vision to life!"
+                  "Reach out to us today to discuss your project ideas and
+                  discover how our innovative solutions can bring your vision to
+                  life!"
                 </p>
                 <div className="text-center md:py-4">
                   <button
                     className={`font-medium py-3 md:py-4 md:px-8  px-6 rounded-full ${
                       isDarkMode
-                        ? "bg-[#000000] text-[#ffffff] hover:bg-[#ffffff]/[0.15] hover:text-white hover:border hover:border-[#E9E1B4]"
+                        ? "bg-[#000000] text-[#ffffff] hover:bg-[#ffffff]/[0.15] hover:text-black hover:border hover:border-[#10100d]"
                         : "bg-[#14213d] text-[white]  hover:bg-[#F7F7F7] hover:border hover:border-[#14213d] hover:text-[#14213d]"
                     }`}
                     onClick={() => navigate("/contact")}
                     style={{ fontFamily: "Inter" }}
                   >
-                    Start Project
+                    Let's Start
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/**if you want to remove second part comment from here  **/}
 
           <div

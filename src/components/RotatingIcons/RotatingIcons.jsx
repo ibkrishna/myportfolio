@@ -6,6 +6,9 @@ import { SiLeetcode, SiCodechef } from "react-icons/si";
 import { LiaHackerrank } from "react-icons/lia";
 import { SiGeeksforgeeks } from "react-icons/si";
 // import balkrishnapandey from '../../assets/tech/balkrishnapandey.pdf';
+import darkmodelogo from "../../assets/logo1f.png";
+import lightmodelogon from "../../assets/logo1ff.png"
+import logolight from "../../assets/lightlogo.png"
 
 const RotatingIcons = () => {
   const { isDarkMode } = useTheme();
@@ -86,13 +89,21 @@ const RotatingIcons = () => {
     </div>
   
     {/* Center Image */}
-    <div className="absolute top-1/2 left-1/2 transform translate-x-12 -translate-y-16">
+    {/* <div className="absolute top-1/2 left-1/2 transform translate-x-12 -translate-y-16">
       <img
-        src={Hero}
+        src={darkmodelogo}
         alt="Hero"
         className="w-20 h-20 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-lg"
       />
-    </div>
+    </div> */}
+    <div className="absolute top-1/2 left-1/2 transform translate-x-12 -translate-y-16">
+  <img
+    src={isDarkMode ? darkmodelogo : logolight} // Conditionally set the image source
+    alt="Hero"
+    className="w-20 h-20 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-lg"
+  />
+</div>
+    
   </div>
   
 

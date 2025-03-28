@@ -23,9 +23,9 @@ function RightScroll() {
 
   const handleIconClick = (type) => {
     if (type === "whatsapp") {
-      window.open("https://wa.me/", "_blank");
+      window.open("https://wa.me/+919511469185", "_blank");
     } else if (type === "phone") {
-      window.location.href = "tel:+";
+      window.location.href = "tel:+919511469185";
     } else {
       setPopupContent(type);
       setShowPopup(true);
@@ -76,8 +76,8 @@ function RightScroll() {
             </button>
             <h2 className="text-lg font-bold mb-4">
               {popupContent === "phone"
-                ? "Innowide Technologies"
-                : "Innowide Technologies"}
+                ? "Krishna"
+                : "Krishna"}
             </h2>
             <p>
               {popupContent === "phone"

@@ -12,97 +12,97 @@ const ProjectList = () => {
       title: "Personal Portfolio ",
       description:
         "Built a sleek and interactive portfolio to showcase skills, projects, and achievements. Features a minimalist design, smooth animations, and a dark mode toggle for an enhanced user experience.",
-      technologies: ["React", "Tailwind CSS", "Node.js"],
-      link: "https://portfolio.example.com",
-      github: "https://github.com/username/portfolio",
+      technologies: [ "JSX","React.js",  "Redux","Tailwind CSS", "Node.js"],
+      link: "https://ibkrishna.in",
+      github: "https://github.com/ibkrishna/myportfolio",
     },
     {
-      title: "Innowide Website",
+      title: "Innowide Technologies",
       description:
-        "Developed a full-fledged online shopping platform with secure authentication, personalized recommendations, and real-time order tracking.",
-      technologies: ["React", "Redux", "Firebase"],
-      link: "https://ecommerce.example.com",
-      github: "https://github.com/username/ecommerce",
+       "The Innowide Technologies Website showcases the company's cutting-edge IT solutions, specializing in software development, cloud integration, and data management. Built with React, Redux, Firebase, Tailwind CSS, and Node.js, the site provides a highly interactive and responsive experience, offering seamless navigation and real-time data updates for clients.",
+      technologies: ["React", "Redux", "Firebase", "Tailwind CSS"," Node.js"],
+      link: "https://innowidetechnologies.com",
+      github: "https://github.com/ibkrishna/Innowide",
     },
     {
-      title: "Cateyesentertainment Website",
+      title: "Cateyesentertainment ",
       description:
-        "Created an advanced weather forecasting app providing real-time temperature, humidity, and precipitation data. Integrated geolocation for automatic location-based updates.",
-      technologies: ["React", "OpenAPI", "Redux"],
-      link: "https://weatherapp.example.com",
-      github: "https://github.com/username/weather-app",
+       "The Katieentertainment Website is a vibrant platform showcasing the creativity and projects of a dynamic production house. It integrates OpenAPI for seamless content updates, along with Redux for efficient state management. The site utilizes HTML, CSS, Tailwind CSS, and JavaScript for a responsive, interactive user experience, bringing entertainment content to life.",
+      technologies: ["OpenAPI", "Redux", "HTML","CSS", "Tailwind Css","Javascript"],
+      link: "https://cateyesentertainment.in",
+      github: "https://github.com/ibkrishna/Cateyesentertainment",
     },
     {
-      title: "Katieentertainment Website",
-      description:
-        "Built a sleek and interactive portfolio to showcase skills, projects, and achievements. Features a minimalist design, smooth animations, and a dark mode toggle for an enhanced user experience.",
-      technologies: ["React", "Tailwind CSS", "Node.js"],
-      link: "https://portfolio.example.com",
-      github: "https://github.com/username/portfolio",
-    },
-    {
-      title: "Corplyx Website ",
-      description:
-        "Developed a full-fledged online shopping platform with secure authentication, personalized recommendations, and real-time order tracking.",
-      technologies: ["React", "Redux", "Firebase"],
-      link: "https://ecommerce.example.com",
-      github: "https://github.com/username/ecommerce",
-    },
-    {
-      title: "Epitozainfotech Website",
-      description:
-        "Created an advanced weather forecasting app providing real-time temperature, humidity, and precipitation data. Integrated geolocation for automatic location-based updates.",
-      technologies: ["React", "OpenAPI", "Redux"],
-      link: "https://weatherapp.example.com",
-      github: "https://github.com/username/weather-app",
-    },
-    {
-      title: "Playscapeshippers Website",
+      title: "Katieentertainment ",
       description:
         "Built a sleek and interactive portfolio to showcase skills, projects, and achievements. Features a minimalist design, smooth animations, and a dark mode toggle for an enhanced user experience.",
-      technologies: ["React", "Tailwind CSS", "Node.js"],
-      link: "https://portfolio.example.com",
-      github: "https://github.com/username/portfolio",
+      technologies: ["HTML","Tailwind CSS","JavaScript"],
+      link: "https://katieentertainment.com",
+      github: "https://github.com/ibkrishna/Katieentertainment",
     },
     {
-      title: "Shivdharalogistic Website",
+      title: "Corplyx Technologies",
       description:
-        "Developed a full-fledged online shopping platform with secure authentication, personalized recommendations, and real-time order tracking.",
-      technologies: ["React", "Redux", "Firebase"],
-      link: "https://ecommerce.example.com",
-      github: "https://github.com/username/ecommerce",
+        "The Corplyx Website is a modern IT platform offering innovative solutions in software development, cloud services, and IT consulting. Built with React, Redux, Tailwind CSS, SCSS, Bootstrap, Node.js, and MongoDB, the website features a dynamic, responsive design, ensuring seamless user interaction and a high-performance backend for optimized services.",
+      technologies: ["React", "Redux", "Tailwind CSS","SCSS","Bootstrap","Node.js","Mongodb"],
+      link: "https://corplyxtechnology.com/",
+      github: "https://github.com/ibkrishna/Corplyx",
     },
     {
-      title: "Marinashipping Website",
+      title: "Epitozainfotech",
       description:
-        "Created an advanced weather forecasting app providing real-time temperature, humidity, and precipitation data. Integrated geolocation for automatic location-based updates.",
-      technologies: ["React", "OpenAPI", "Redux"],
-      link: "https://weatherapp.example.com",
-      github: "https://github.com/username/weather-app",
+        "The Epitozainfotech  showcases the IT services offered by Epitozainfotech, including web development, IT consulting, and cloud solutions. The site features a modern, responsive design built with HTML, CSS, JavaScript, and Tailwind CSS, providing an engaging user experience and reflecting the company’s innovative approach to IT services.",
+      technologies: ["HTML","CSS","Javascript","Tailwind CSS"],
+      link: "https://epitozainfotech.com",
+      github: "https://github.com/ibkrishna/Epitozainfotech",
     },
     {
-      title: "Maxdigitalsolution Website",
+      title: "Playscapeshippers ",
       description:
-        "Built a sleek and interactive portfolio to showcase skills, projects, and achievements. Features a minimalist design, smooth animations, and a dark mode toggle for an enhanced user experience.",
-      technologies: ["React", "Tailwind CSS", "Node.js"],
-      link: "https://portfolio.example.com",
-      github: "https://github.com/username/portfolio",
+       "he Playscapeshippers  is designed for a logistics company, providing seamless access to services such as shipping, freight management, and supply chain solutions. Built with HTML, CSS, JavaScript, and Tailwind CSS, the website ensures a responsive, user-friendly interface, offering clients a smooth experience when tracking shipments and services.",
+      technologies: ["HTML","CSS", "Tailwind CSS", "Javascript", " UI tech"],
+      link: "https://playscapeshippers.com",
+      github: "https://github.com/ibkrishna/Playscapeshippers",
     },
     {
-      title: "Ratnabanlogistics Website",
+      title: "Shivdharalogistics",
       description:
-        "Developed a full-fledged online shopping platform with secure authentication, personalized recommendations, and real-time order tracking.",
-      technologies: ["React", "Redux", "Firebase"],
-      link: "https://ecommerce.example.com",
-      github: "https://github.com/username/ecommerce",
+        "The Shivdharalogistic  delivers a seamless digital experience for logistics management, offering comprehensive solutions for freight, transportation, and warehousing. With an emphasis on reliability and efficiency, the site integrates easy navigation and modern design using HTML, CSS, JavaScript, and Tailwind CSS, ensuring smooth operations for businesses and customers alike.",
+      technologies: ["HTML","CSS", "Tailwind CSS", "Javascript", " UI tech"],
+      link: "https://shivdharalogistic.in",
+      github: "https://github.com/ibkrishna/Shivdharalogistic",
     },
     {
-      title: "cloudaxis Website",
+      title: "Marinashipping",
       description:
-        "Created an advanced weather forecasting app providing real-time temperature, humidity, and precipitation data. Integrated geolocation for automatic location-based updates.",
-      technologies: ["React", "OpenAPI", "Redux"],
-      link: "https://weatherapp.example.com",
-      github: "https://github.com/username/weather-app",
+       "The Marinashipping  is designed to streamline the maritime logistics process, offering a range of services such as shipping, port management, and cargo tracking. Built with HTML, CSS, JavaScript, and Tailwind CSS, the site ensures smooth user interactions and easy access to real-time shipping information for global clients.",
+      technologies: ["HTML","CSS", "Tailwind CSS", "Javascript", " UI tech"," Firebase"],
+      link: "https://marinashipping.in",
+      github: "https://github.com/ibkrishna/Marinashipping",
+    },
+    {
+      title: "Maxdigitalsolution ",
+      description:
+       "The Maxdigitalsolution  is a cutting-edge platform dedicated to transforming education through digital solutions. Offering a range of e-learning tools, online courses, and interactive resources, the website provides an intuitive experience for students and educators. Built with HTML, CSS, JavaScript, and Tailwind CSS, it ensures accessibility and smooth navigation",
+      technologies: ["HTML","CSS", "Tailwind CSS", "Javascript", " UI tech"," Firebase"],
+      link: "https://maxdigitalsolution.com/",
+      github: "https://github.com/ibkrishna/Maxdigitalsolution",
+    },
+    {
+      title: "Ratnabanlogistics ",
+      description:
+        "The Ratnabanlogistics  offers a robust platform for managing logistics and supply chain services, including transportation, warehousing, and freight solutions. Designed for efficiency, the site features a user-friendly interface built with HTML, CSS, JavaScript, and Tailwind CSS, enabling clients to easily track shipments and access services in real-time.",
+      technologies: ["HTML","CSS", "Tailwind CSS", "Javascript", " UI tech"," Firebase"],
+      link: "https://ratnabanlogistics.com",
+      github: "https://github.com/ibkrishna/Ratnabanlogistics",
+    },
+    {
+      title: "cloudaxis ",
+      description:
+        "The Cloudaxis  serves as a gateway to cutting-edge cloud solutions, offering services like cloud migration, infrastructure management, and IT consulting. Built with HTML, CSS, JavaScript, and Tailwind CSS, the website ensures a sleek, responsive design, providing users with an intuitive experience and seamless access to advanced cloud technologies.",
+      technologies: ["HTML","CSS", "Tailwind CSS", "Javascript", " UI tech"," Firebase"],
+      link: "https://cloudaxis.in",
+      github: "https://github.com/ibkrishna/cloudaxis",
     },
     
   ];
