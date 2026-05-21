@@ -1,14 +1,13 @@
+
 import React, { useEffect, useState } from 'react';
 import { Github, FileCode, Linkedin, Mail } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
-import Hero from '../../assets/hero.png';
 import { SiLeetcode, SiCodechef } from "react-icons/si";
 import { LiaHackerrank } from "react-icons/lia";
 import { SiGeeksforgeeks } from "react-icons/si";
-// import balkrishnapandey from '../../assets/tech/balkrishnapandey.pdf';
+
 import darkmodelogo from "../../assets/logo1f.png";
-import lightmodelogon from "../../assets/logo1ff.png"
-import logolight from "../../assets/lightlogo.png"
+import logolight from "../../assets/lightlogo.png";
 
 const RotatingIcons = () => {
   const { isDarkMode } = useTheme();
@@ -17,9 +16,12 @@ const RotatingIcons = () => {
   const iconSize = "h-8 w-8";
   const iconColor = isDarkMode ? 'text-white' : 'text-[#ffffff]';
 
+  // Resume PDF path (in public folder)
+  const resumeLink = "/balkrishnapandey_sde.pdf";
+
   useEffect(() => {
     let interval;
-    if (isHovered === null) { 
+    if (isHovered === null) {
       interval = setInterval(() => {
         setRotation(prev => (prev + 0.5) % 360);
       }, 50);
@@ -37,7 +39,7 @@ const RotatingIcons = () => {
 
   const icons = [
     { Icon: Github, name: 'GitHub', link: "https://github.com/ibkrishna" },
-    { Icon: FileCode, name: 'Resume', link: "/src/assets/balkrishnapandey.pdf" },
+    { Icon: FileCode, name: 'Resume', link: resumeLink }, // ✅ Fixed Resume Link
     { Icon: SiCodechef, name: 'CodeChef', link: "https://www.codechef.com/users/ibkrishna" },
     { Icon: SiLeetcode, name: 'LeetCode', link: "https://leetcode.com/u/ibkrishna/" },
     { Icon: LiaHackerrank, name: 'HackerRank', link: "https://www.hackerrank.com/profile/ibkrishna" },
@@ -48,66 +50,56 @@ const RotatingIcons = () => {
 
   return (
     <div className="hidden lg:block w-[500px] h-[450px] relative">
-    {/* Rotating Icons */}
-    <div className="absolute -top-5 left-0 w-full h-full">
-      {icons.map(({ Icon, name, link }, index) => {
-        const { x, y } = calculatePosition(index, icons.length);
-        const isLeft = x < 0;
-  
-        return (
-          <div
-            key={index}
-            className="absolute p-2 transition-all duration-300 ease-in-out"
-            style={{
-              transform: `translate(${x + 340}px, ${y + 220}px)`,
-              left: 0,
-              top: 0,
-            }}
-            onMouseEnter={() => setIsHovered(index)} 
-            onMouseLeave={() => setIsHovered(null)} 
-          >
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              <div className={`${isDarkMode ? 'bg-[#000000] border border-[#e9e1b4]' : 'bg-[#14213d] border-[#e9e1b4]'} p-4 rounded-full shadow-lg`}>
-                <Icon className={`${iconSize} ${iconColor}`} />
-              </div>
-            </a>
-            {isHovered === index && (
-              <div 
-                className={`absolute top-0 left-4 mt-4 text-center p-1 ${isDarkMode ? 'text-[#FFFCF2]' :'text-[#14213d]'} text-sm`}
-                style={{
-                  left: isLeft ? '-100%' : '100%', 
-                  // transform: isLeft ? 'translateX(-10px)' : 'translateX(10px)',
-                  textAlign: isLeft ? 'right' : 'left', 
-                }}
-              >
-                {name} 
-              </div>
-            )}
-          </div>
-        );
-      })}
-    </div>
-  
-    {/* Center Image */}
-    {/* <div className="absolute top-1/2 left-1/2 transform translate-x-12 -translate-y-16">
-      <img
-        src={darkmodelogo}
-        alt="Hero"
-        className="w-20 h-20 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-lg"
-      />
-    </div> */}
-    <div className="absolute top-1/2 left-1/2 transform translate-x-12 -translate-y-16">
-  <img
-    src={isDarkMode ? darkmodelogo : logolight} // Conditionally set the image source
-    alt="Hero"
-    className="w-20 h-20 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-lg"
-  />
-</div>
-    
-  </div>
-  
+      {/* Rotating Icons */}
+      <div className="absolute -top-5 left-0 w-full h-full">
+        {icons.map(({ Icon, name, link }, index) => {
+          const { x, y } = calculatePosition(index, icons.length);
+          const isLeft = x < 0;
 
+          return (
+            <div
+              key={index}
+              className="absolute p-2 transition-all duration-300 ease-in-out"
+              style={{
+                transform: `translate(${x + 340}px, ${y + 220}px)`,
+                left: 0,
+                top: 0,
+              }}
+              onMouseEnter={() => setIsHovered(index)}
+              onMouseLeave={() => setIsHovered(null)}
+            >
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <div className={`${isDarkMode ? 'bg-[#000000] border border-[#e9e1b4]' : 'bg-[#14213d] border-[#e9e1b4]'} p-4 rounded-full shadow-lg`}>
+                  <Icon className={`${iconSize} ${iconColor}`} />
+                </div>
+              </a>
+              {isHovered === index && (
+                <div
+                  className={`absolute top-0 left-4 mt-4 text-center p-1 ${isDarkMode ? 'text-[#FFFCF2]' : 'text-[#14213d]'} text-sm`}
+                  style={{
+                    left: isLeft ? '-100%' : '100%',
+                    textAlign: isLeft ? 'right' : 'left',
+                  }}
+                >
+                  {name}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Center Logo */}
+      <div className="absolute top-1/2 left-1/2 transform translate-x-12 -translate-y-16">
+        <img
+          src={isDarkMode ? darkmodelogo : logolight}
+          alt="Hero"
+          className="w-20 h-20 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-lg"
+        />
+      </div>
+    </div>
   );
 };
 
 export default RotatingIcons;
+

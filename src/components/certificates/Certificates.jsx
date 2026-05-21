@@ -8,7 +8,7 @@ const certificates = [
   { id: 3, title: "AWS Solutions Architect", year: "2022", issuedBy: "Google" },
   { id: 4, title: "Google Cloud Professional", year: "2022", issuedBy: "Google" },
   { id: 5, title: "Complete Web Development", year: "2024", issuedBy: "Udemy" },
-  { id: 6, title: "Digital Marketing", year: "2022", issuedBy: "Google" }
+  { id: 6, title: "Microsoft Azure AI Fundamentals", year: "2025", issuedBy: "Udemy" }
 ];
 
 const DISPLAY_TIME = 8000;
@@ -36,7 +36,7 @@ const Certificates = () => {
         setIsTransitioning(false);
       }
     };
-    
+
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -45,14 +45,14 @@ const Certificates = () => {
   useEffect(() => {
     let displayTimer;
     let transitionTimer;
-    
+
     const startNextTransition = () => {
       setIsTransitioning(true);
-      
+
       transitionTimer = setTimeout(() => {
         setCurrentPage((prev) => {
-          const totalPages = displayMode === 1 
-            ? certificates.length 
+          const totalPages = displayMode === 1
+            ? certificates.length
             : Math.ceil(certificates.length / displayMode);
           return (prev + 1) % totalPages;
         });
@@ -108,18 +108,17 @@ const Certificates = () => {
         <div className="certificates-wrapper">
           <div
             className={`flex flex-wrap gap-8 items-center min-h-[450px] w-full transition-all duration-500 ease-in-out
-              ${displayMode === 3 ? 'lg:justify-evenly' : 
-                displayMode === 2 ? 'md:justify-evenly' : 
-                'justify-center'}`}
+              ${displayMode === 3 ? 'lg:justify-evenly' :
+                displayMode === 2 ? 'md:justify-evenly' :
+                  'justify-center'}`}
           >
             {currentCertificates.map((cert, index) => (
               <div
                 key={cert.id}
-                className={`certificate-container ${
-                  isTransitioning 
-                    ? `slide-out-${displayMode}`
-                    : `slide-in-${displayMode}`
-                } ${getPositionClass(index)}`}
+                className={`certificate-container ${isTransitioning
+                  ? `slide-out-${displayMode}`
+                  : `slide-in-${displayMode}`
+                  } ${getPositionClass(index)}`}
               >
                 <CertificateBadge
                   title={cert.title}
@@ -132,16 +131,15 @@ const Certificates = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="flex justify-center gap-2 mt-6">
         {Array.from({ length: Math.ceil(certificates.length / displayMode) }).map((_, index) => (
           <button
             key={index}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentPage
-                ? `${isDarkMode ? 'bg-[#e9e1b4]' : 'bg-[#14213d]'} w-4` 
-                : 'bg-gray-300'
-            }`}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentPage
+              ? `${isDarkMode ? 'bg-[#e9e1b4]' : 'bg-[#14213d]'} w-4`
+              : 'bg-gray-300'
+              }`}
             onClick={() => setCurrentPage(index)}
           />
         ))}

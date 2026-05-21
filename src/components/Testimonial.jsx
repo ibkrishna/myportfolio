@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: 'Riya',
     role: 'CEO Cateyes',
-    feedback: 'The final product was stunning, and Shiva Raj was a joy to work with. I look forward to our next project together!',
+    feedback: 'The final product was stunning, and Shiva Raj was a joy to work with.I look forward to our next project together!',
     image: 'https://via.placeholder.com/100',
   },
   {
